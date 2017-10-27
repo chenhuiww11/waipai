@@ -181,21 +181,23 @@ export default {
         prevButton: '.dt-change-click-left',
       })
       $('.dt-change-click-left').click(function(){
-      	console.log(mySwiper)
-        if (self.audiodom.paused) {
-            self.audiodom.play();
-            mySwiper.slidePrev();
-        } else {
-            // 播放中
-        }
+        console.log(mySwiper)
+        mySwiper.slidePrev();
+        // if (self.audiodom.paused) {
+        //     self.audiodom.play();
+        //     mySwiper.slidePrev();
+        // } else {
+        //     // 播放中
+        // }
       })
       $('.dt-change-click-right').click(function(){
-        if (self.audiodom.paused) {
-            self.audiodom.play();
-            mySwiper.slideNext();
-        } else {
-            // 播放中
-        }
+         mySwiper.slideNext();
+        // if (self.audiodom.paused) {
+        //     self.audiodom.play();
+        //     mySwiper.slideNext();
+        // } else {
+        //     // 播放中
+        // }
       })
   },
   methods:{
@@ -242,9 +244,10 @@ export default {
     position: relative;
   }
   .dt-change-click-left{
+    width: 40%;
     position: absolute;
     top: 50%;
-    left:20px;
+    left:-12%;
     /*line-height: 1;*/
     text-align: center;
     transform: translate(50%,-50%);
@@ -252,9 +255,10 @@ export default {
     display:table;
   }
 .dt-change-click-right{
+  width: 40%;
   position: absolute;
   top: 50%;
-  right:30px;
+  right:28%;
   /*line-height: 1;*/
   text-align: center;
   transform: translate(50%,-50%);
@@ -271,9 +275,11 @@ export default {
   width: 1rem;
 }
 .dt-change-click-right span img{
+  float: right;
   -webkit-animation:gogogoright 1.5s infinite linear ;
 }
 .dt-change-click-left span img{
+  float: left;
   -webkit-animation:gogogoleft 1.5s infinite linear ;
 }
 @-webkit-keyframes gogogoright {

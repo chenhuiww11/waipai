@@ -133,14 +133,14 @@ export default {
   	jump(num){
       var self = this
       self.audiodom.play();
-      if(num == 3){
-        window.sessionStorage.setItem('isnewpage',true)
-        window.location.href = 'https://item.jd.com/12199337.html#product-detail'
-      }else{
+      // if(num == 3){
+      //   window.sessionStorage.setItem('isnewpage',true)
+      //   window.location.href = 'https://item.jd.com/12199337.html#product-detail'
+      // }else{
         setTimeout(function(){
           self.$emit('listenToChildEvent',num)
         },100)
-      }
+      // }
   	},
   	show(num){
   		if(num==1){
