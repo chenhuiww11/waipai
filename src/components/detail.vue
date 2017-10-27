@@ -248,8 +248,6 @@ export default {
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     display: table;
-    width: 50px;
-    height: 43px;
   }
 .dt-change-click-right{
   width: 40%;
@@ -271,10 +269,10 @@ export default {
 }
 .dt-change-click-left span{
 	
-left: 20%;
+/* left: 20%; */
 }
 .dt-change-click-right span{
- right: 40%;
+ /* right: 40%; */
 }
 .dt-change-click-right span img,.dt-change-click-left span img{
   display: block;
