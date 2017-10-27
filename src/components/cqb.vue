@@ -47,12 +47,12 @@ export default {
 	padding:70px 0 0px 0;
 	text-align: center;
 }
-.back{
+/*.back{
 	position: absolute;
 	left: 10px;
 	top: 10px;
 	width: 44px;
-}
+}*/
 .text{
 	width: 80%;
 }

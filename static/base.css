@@ -90,7 +90,7 @@ div.pinch-zoom{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 999;
     display: none;
 }
 .pinch-zoom-container{
@@ -109,4 +109,9 @@ div.pinch-zoom{
 	display: none;
 	z-index: 33;
 }
-       
+.back{
+	position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 4rem;
+}       

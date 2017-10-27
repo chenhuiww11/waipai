@@ -258,8 +258,6 @@ export default {
 	margin-top: 100px;
 }
 .xsnrtitle{
-	background: url(../../static/loading/shan1.png) no-repeat;
-	background-size:contain;
 }
 .adress{
 	position: relative;
