@@ -32,7 +32,10 @@
     	<div class="xsnrtitle">
     		<div class="adress">
     			<img src="../../static/loading/cc.jpg"/>
-    			<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(2)"/>
+    			<div class="shanshuo">
+    				<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(2)"/>
+    				<img src="../../static/loading/dian.png" class="dian"/>
+    			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
@@ -292,7 +295,7 @@ export default {
 	padding: 30px 0;
 }
 .moreimg{
-	width: 100px;
+	width: 70px;
 }
 .banquan{
 	width: 80%;
@@ -310,24 +313,52 @@ export default {
 	right: 10px;
 	width:44px;
 }
+.shanshuo{
+	position: relative;
+}
+.dian{
+	  position: absolute;
+    top: 46%;
+    left: 62%;
+    -webkit-animation: twinkling-data-v-448a5f06 2s infinite linear;
+    width: 26px;
+    z-index: 2;
+}
 @-webkit-keyframes gogogobottom {
   0%{
     -webkit-transform:translateY(0);
     opacity: 1;
   }
   25%{
-    opacity: 0.5;
-  }
-  50%{
-    -webkit-transform:translateY(10px);
     opacity: 0.8;
   }
+  50%{
+    -webkit-transform:translateY(5px);
+    opacity: 0.6;
+  }
   75%{
-    opacity: 0.5;
+  	-webkit-transform:translateY(15px);
+    opacity: 0;
   }
   100%{
-    -webkit-transform:translateY(0);
-    opacity: 1;
+    -webkit-transform:translateY(0px);
+    opacity: 0;
   }
 }
+@-webkit-keyframes twinkling{   /*透明度由0到1*/  
+    0%{  
+        opacity:0.1;                /*透明度为0*/  
+    }  
+    100%{  
+        opacity:1;              /*透明度为1*/  
+    }  
+}  
+@keyframes twinkling{   /*透明度由0到1*/  
+    0%{  
+        opacity:0.1;                /*透明度为0*/  
+    }  
+    100%{  
+        opacity:1;              /*透明度为1*/  
+    }  
+}  
 </style>
