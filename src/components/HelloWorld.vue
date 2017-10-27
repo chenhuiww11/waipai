@@ -287,7 +287,7 @@ export default {
 	padding: 30px 0;
 }
 .moreimg{
-	width: 100px;
+	width: 70px;
 }
 .banquan{
 	width: 80%;
@@ -311,18 +311,19 @@ export default {
     opacity: 1;
   }
   25%{
-    opacity: 0.5;
-  }
-  50%{
-    -webkit-transform:translateY(10px);
     opacity: 0.8;
   }
+  50%{
+    -webkit-transform:translateY(5px);
+    opacity: 0.6;
+  }
   75%{
-    opacity: 0.5;
+  	-webkit-transform:translateY(15px);
+    opacity: 0;
   }
   100%{
-    -webkit-transform:translateY(0);
-    opacity: 1;
+    -webkit-transform:translateY(0px);
+    opacity: 0;
   }
 }
 </style>
