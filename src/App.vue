@@ -86,7 +86,7 @@ $('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight'
     },
     watch : {
 	        count (val,oldval) {
-	            if(val == 74){
+	            if(val >= 74){
 	                this.show = true
 	                //然后可以对后台发送一些ajax操作
 	            }
