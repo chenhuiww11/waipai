@@ -134,6 +134,9 @@ html,body{
   -webkit-transform: scale(0.6);
 	animation:run 1s steps(1, start) infinite;
   -webkit-animation:run 1s steps(1, start) infinite;
+  -webkit-backface-visibility:hidden; //隐藏转换的元素的背面  
+	-webkit-transform-style: preserve-3d; //使被转换的元素的子元素保留其 3D 转换  
+	-webkit-transform:translate3d(0,0,0);
 
 }
 @keyframes run{
@@ -169,9 +172,6 @@ html,body{
             }
             83.333%{
                 background-position: -800px 0 ;
-            }
-            91.666%{
-                background-position: -880px 0 ;
             }
             100%{
                 background-position: 0px 0 ;
@@ -210,9 +210,6 @@ html,body{
             }
             83.333%{
                 background-position: -800px 0 ;
-            }
-            91.666%{
-                background-position: -880px 0 ;
             }
             100%{
                 background-position: 0 0 ;
