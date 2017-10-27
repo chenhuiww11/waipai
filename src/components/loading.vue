@@ -158,19 +158,19 @@ html,body{
             41.666%{
                 background-position: -400px 0 ;
             }
-            50.0%{
+            52.0%{
                 background-position: -480px 0 ;
             }
-            58.333%{
+            60.333%{
                 background-position: -560px 0 ;
             }
-            66.666%{
+            70.666%{
                 background-position: -640px 0 ;
             }
-            75.0%{
+            77.0%{
                 background-position: -720px 0 ;
             }
-            83.333%{
+            85.333%{
                 background-position: -800px 0 ;
             }
             100%{
@@ -196,23 +196,23 @@ html,body{
             41.666%{
                 background-position: -400px 0 ;
             }
-            50.0%{
+            52.0%{
                 background-position: -480px 0 ;
             }
-            58.333%{
+            60.333%{
                 background-position: -560px 0 ;
             }
-            66.666%{
+            70.666%{
                 background-position: -640px 0 ;
             }
-            75.0%{
+            77.0%{
                 background-position: -720px 0 ;
             }
-            83.333%{
+            85.333%{
                 background-position: -800px 0 ;
             }
             100%{
-                background-position: 0 0 ;
+                background-position: 0px 0 ;
             }
         }
 </style>
