@@ -1,6 +1,6 @@
 <template>
   <div class="cqbang">
-    <img src="../../static/gsj/gsjheader.png" class="gsjheader">
+    <img src="../../static/gsj/gushiji.jpg" class="gsjheader">
     <img src="../../static/gsj/gsjline.png" class="gsjline">
     <img src="../../static/gsj/gsjbuy.png" class="gsjbuy">
     <ul class="gsjbuyinfo">
