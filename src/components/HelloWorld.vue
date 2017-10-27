@@ -346,19 +346,31 @@ export default {
   }
 }
 @-webkit-keyframes twinkling{   /*透明度由0到1*/  
-    0%{  
-        opacity:0.1;                /*透明度为0*/  
+   0%{  
+        opacity:.9;                /*透明度为0*/  
+				transform:scale(.8,.8); 
     }  
+		50%{
+			opacity:1;              /*透明度为1*/  
+				transform:scale(1.2,1.2); 
+		}
     100%{  
-        opacity:0.8;              /*透明度为1*/  
-    }  
+        opacity:.9;              /*透明度为1*/  
+				transform:scale(.8,.8); 
+    } 
 }  
 @keyframes twinkling{   /*透明度由0到1*/  
     0%{  
-        opacity:0.1;                /*透明度为0*/  
+        opacity:.9;                /*透明度为0*/  
+				transform:scale(.8,.8); 
     }  
+		50%{
+			opacity:1;              /*透明度为1*/  
+				transform:scale(1.2,1.2); 
+		}
     100%{  
-        opacity:0.8;              /*透明度为1*/  
+        opacity:.9;              /*透明度为1*/  
+				transform:scale(.8,.8); 
     }  
 }  
 </style>
