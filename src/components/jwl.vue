@@ -13,8 +13,10 @@
      <!--导航-->
 	    <div class="nav" @click="jwlback()">
 	    	<img src="../../static/jwl/top.png"/>
-	    	
+
 	    </div>
+    <audio id="clickMusic" src="./static/clickaudio.mp3" >
+    </audio>
   </div>
 </template>
 
@@ -24,12 +26,17 @@ export default {
   data () {
     return {
       scrolled: false,
+      audiodom : ''
     }
+  },
+  mounted(){
+    var self = this;
+    self.audiodom = document.getElementById('clickMusic')
   },
   methods: {
   	back(){
   		   var self = this
-				// self.audiodom.play();
+				 self.audiodom.play();
 				setTimeout(function(){
 					self.$emit('listenToChildEvent',0)
 				},300)

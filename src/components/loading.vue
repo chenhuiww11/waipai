@@ -63,6 +63,7 @@ export default {
 			   if(self.show){
 			   	    pro=100;
 			   	    $('.loadper').text(pro+'%');
+//           return
 			   	  	$('.loading').fadeOut(500)
 
               self.$emit('listenToChildEvent',9)

@@ -82,6 +82,8 @@
       <audio id="Music" src="./static/bg.mp3" loop="loop" preload>
     	</audio>
      </div>
+    <audio id="clickMusic" src="./static/clickaudio.mp3" >
+    </audio>
   </div>
 </template>
 
@@ -98,7 +100,8 @@ export default {
     	scrolled: false,
 			isAndroid:'',
 			isiOS:'',
-			headerheight:0
+			headerheight:0,
+      clickMusic : ''
     }
   },
   created(){
@@ -126,6 +129,7 @@ export default {
   methods: {
   	jump(num){
       var self = this
+      self.audiodom.play();
       if(num == 3){
         window.sessionStorage.setItem('isnewpage',true)
         window.location.href = 'https://item.jd.com/12199337.html#product-detail'
@@ -190,6 +194,7 @@ export default {
   mounted(){
     var self = this;
 		self.audiow = document.getElementById('Music')
+    self.audiodom = document.getElementById('clickMusic')
 		setTimeout(function(){
 			window.sessionStorage.setItem('headerheight',$('.bigbanner').height())
 			self.headerheight=$('.bigbanner').height();

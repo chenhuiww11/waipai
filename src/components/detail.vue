@@ -205,7 +205,7 @@ export default {
         setTimeout(function(){
         self.$emit('listenToChildEvent',0)
         },300)
-        
+
     },
     clickAudio : function(){
 
@@ -219,7 +219,6 @@ export default {
     	}
   	},
   	back:function(){
-     
   		$('body,html').animate({ scrollTop: 0 }, 200);
   	}
   }
