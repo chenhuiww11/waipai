@@ -10,7 +10,7 @@
                   <div class="dt-change-dt">
                     <img src="../../static/detail/tab.png" class="dt-change-dt">
                     <div class="dt-change-click-right">
-                      魔鲲
+                      
                       <span>
                         <img src="../../static/detail/right.png" alt="">
                       </span>
@@ -19,7 +19,7 @@
                       <span>
                         <img src="../../static/detail/left.png" alt="">
                       </span>
-                      洛璃
+                      
                     </div>
                   </div>
                 </div>
@@ -242,10 +242,9 @@ export default {
     position: relative;
   }
   .dt-change-click-left{
-    width: 40%;
     position: absolute;
     top: 50%;
-    left:-15%;
+    left:20px;
     /*line-height: 1;*/
     text-align: center;
     transform: translate(50%,-50%);
@@ -253,10 +252,9 @@ export default {
     display:table;
   }
 .dt-change-click-right{
-  width: 40%;
   position: absolute;
   top: 50%;
-  right:25%;
+  right:30px;
   /*line-height: 1;*/
   text-align: center;
   transform: translate(50%,-50%);
@@ -284,77 +282,77 @@ export default {
     opacity: 0;
   }
   25%{
-    -webkit-transform:translate(-3px,0);
+    -webkit-transform:translate(3px,0);
   }
   50%{
-    -webkit-transform:translate(-5px,0);
-    opacity: 1;
+    -webkit-transform:translate(5px,0);
+    opacity: .5;
   }
   75%{
-    -webkit-transform:translate(-7px,0);
+    -webkit-transform:translate(7px,0);
   }
   100%{
-    -webkit-transform:translate(-10px,0);
-    opacity: 0;
+    -webkit-transform:translate(10px,0);
+    opacity: 1;
   }
 }
 @keyframes gogogoright {
   0%{
     -webkit-transform:translate(0px,0);
-    opacity: 0;
-  }
-  25%{
-    -webkit-transform:translate(-3px,0);
-  }
-  50%{
-    -webkit-transform:translate(-5px,0);
     opacity: 1;
   }
+  25%{
+    -webkit-transform:translate(3px,0);
+  }
+  50%{
+    -webkit-transform:translate(5px,0);
+    opacity: 0.5;
+  }
   75%{
-    -webkit-transform:translate(-7px,0);
+    -webkit-transform:translate(7px,0);
   }
   100%{
-    -webkit-transform:translate(-10px,0);
+    -webkit-transform:translate(10px,0);
     opacity: 0;
   }
 }
 @-webkit-keyframes gogogoleft {
   0%{
     -webkit-transform:translate(0px,0);
-    opacity: 0;
-  }
-  25%{
-    -webkit-transform:translate(3px,0);
-  }
-  50%{
-    -webkit-transform:translate(5px,0);
     opacity: 1;
   }
+  25%{
+    -webkit-transform:translate(-3px,0);
+  }
+  50%{
+    -webkit-transform:translate(-5px,0);
+    opacity: .5;
+  }
   75%{
-    -webkit-transform:translate(7px,0);
+    -webkit-transform:translate(-7px,0);
   }
   100%{
-    -webkit-transform:translate(10px,0);
+    -webkit-transform:translate(-10px,0);
     opacity: 0;
   }
 }
 @keyframes gogogoleft {
   0%{
     -webkit-transform:translate(0px,0);
-    opacity: 0;
-  }
-  25%{
-    -webkit-transform:translate(3px,0);
-  }
-  50%{
-    -webkit-transform:translate(5px,0);
     opacity: 1;
   }
+  25%{
+    -webkit-transform:translate(-3px,0);
+  }
+  50%{
+    -webkit-transform:translate(-5px,0);
+    opacity: .5;
+  }
   75%{
-    -webkit-transform:translate(7px,0);
+    -webkit-transform:translate(-7px,0);
   }
   100%{
-    -webkit-transform:translate(10px,0);
+    -webkit-transform:translate(-10px,0);
     opacity: 0;
   }
 }
