@@ -66,12 +66,12 @@ export default {
 	width: 84%;
 	margin-bottom: 80px;
 }
-.back{
+/*.back{
 	position: absolute;
 	left: 10px;
 	top: 10px;
 	width: 44px;
-}
+}*/
 .nobottom{
 	margin-bottom: 0;
 }

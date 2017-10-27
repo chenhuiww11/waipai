@@ -34,10 +34,10 @@ export default {
 .dsj{
 	position: relative;
 }
-.back{
+/*.back{
 	position: absolute;
 	left: 10px;
 	top: 10px;
 	width: 44px;
-}
+}*/
 </style>
