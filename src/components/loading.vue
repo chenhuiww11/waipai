@@ -134,7 +134,6 @@ html,body{
   -webkit-transform: scale(0.6);
 	animation:run 1s steps(1, start) infinite;
   -webkit-animation:run 1s steps(1, start) infinite;
-
 }
 @keyframes run{
             0%{
@@ -170,9 +169,9 @@ html,body{
             83.333%{
                 background-position: -800px 0 ;
             }
-            91.666%{
-                background-position: -880px 0 ;
-            }
+            /*91.666%{*/
+                /*background-position: -880px 0 ;*/
+            /*}*/
             100%{
                 background-position: 0px 0 ;
             }
@@ -211,9 +210,9 @@ html,body{
             83.333%{
                 background-position: -800px 0 ;
             }
-            91.666%{
-                background-position: -880px 0 ;
-            }
+            /*91.666%{*/
+                /*background-position: -880px 0 ;*/
+            /*}*/
             100%{
                 background-position: 0 0 ;
             }
