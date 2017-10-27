@@ -350,7 +350,7 @@ export default {
         opacity:0.1;                /*透明度为0*/  
     }  
     100%{  
-        opacity:1;              /*透明度为1*/  
+        opacity:0.8;              /*透明度为1*/  
     }  
 }  
 @keyframes twinkling{   /*透明度由0到1*/  
@@ -358,7 +358,7 @@ export default {
         opacity:0.1;                /*透明度为0*/  
     }  
     100%{  
-        opacity:1;              /*透明度为1*/  
+        opacity:0.8;              /*透明度为1*/  
     }  
 }  
 </style>

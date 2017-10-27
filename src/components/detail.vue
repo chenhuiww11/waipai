@@ -8,7 +8,7 @@
                 <img src="../../static/detail/muchen.jpg" alt="">
                 <div class="dt-change">
                   <div class="dt-change-dt">
-                    <img src="../../static/detail/tab.png" class="dt-change-dt">
+                    <img src="../../static/detail/luoli.png" class="dt-change-dt">
                     <div class="dt-change-click-right">
                       
                       <span>
@@ -29,16 +29,15 @@
               </div>
           </div>
         </div>
-      <!--魔琨-->
+         <!--洛璃-->
       <div class="swiper-slide">
         <div class="detail">
           <div class="dt-header">
-            <img src="../../static/detail/mokun.jpg" alt="">
+            <img src="../../static/detail/luoli.jpg" alt="">
             <div class="dt-change">
               <div class="dt-change-dt">
-                <img src="../../static/detail/tab.png" class="dt-change-dt">
+                <img src="../../static/detail/muyunxi.png" class="dt-change-dt">
                 <div class="dt-change-click-right">
-                  林雨寒
                       <span>
                         <img src="../../static/detail/right.png" alt="">
                       </span>
@@ -47,54 +46,24 @@
                       <span>
                         <img src="../../static/detail/left.png" alt="">
                       </span>
-                  牧尘
                 </div>
               </div>
             </div>
           </div>
           <div class="dt-info">
-            <img src="../../static/detail/mokun-info.png" alt="">
+            <img src="../../static/detail/luoli-info.png" alt="">
           </div>
         </div>
       </div>
-      <!--林雨寒-->
-      <div class="swiper-slide">
-        <div class="detail">
-          <div class="dt-header">
-            <img src="../../static/detail/linyuhan.jpg" alt="">
-            <div class="dt-change">
-              <div class="dt-change-dt">
-                <img src="../../static/detail/tab.png" class="dt-change-dt">
-                <div class="dt-change-click-right">
-                  牧云熙
-                      <span>
-                        <img src="../../static/detail/right.png" alt="">
-                      </span>
-                </div>
-                <div class="dt-change-click-left">
-                      <span>
-                        <img src="../../static/detail/left.png" alt="">
-                      </span>
-                  魔鲲
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dt-info">
-            <img src="../../static/detail/linyuhan-info.png" alt="">
-          </div>
-        </div>
-      </div>
-      <!--牧云熙-->
+       <!--牧云熙-->
         <div class="swiper-slide">
           <div class="detail">
               <div class="dt-header">
                 <img src="../../static/detail/muyunxi.jpg" alt="">
                 <div class="dt-change">
                   <div class="dt-change-dt">
-                    <img src="../../static/detail/tab.png" class="dt-change-dt">
+                    <img src="../../static/detail/tab3.png" class="dt-change-dt">
                     <div class="dt-change-click-right">
-                      洛璃
                       <span>
                         <img src="../../static/detail/right.png" alt="">
                       </span>
@@ -103,7 +72,6 @@
                       <span>
                         <img src="../../static/detail/left.png" alt="">
                       </span>
-                      林雨寒
                     </div>
                   </div>
                 </div>
@@ -113,16 +81,16 @@
               </div>
           </div>
         </div>
-      <!--洛璃-->
+      <!--林雨寒-->
       <div class="swiper-slide">
         <div class="detail">
           <div class="dt-header">
-            <img src="../../static/detail/luoli.jpg" alt="">
+            <img src="../../static/detail/linyuhan.jpg" alt="">
             <div class="dt-change">
               <div class="dt-change-dt">
-                <img src="../../static/detail/tab.png" class="dt-change-dt">
+                <img src="../../static/detail/tab4.png" class="dt-change-dt">
                 <div class="dt-change-click-right">
-                  牧尘
+                	      
                       <span>
                         <img src="../../static/detail/right.png" alt="">
                       </span>
@@ -131,13 +99,38 @@
                       <span>
                         <img src="../../static/detail/left.png" alt="">
                       </span>
-                  牧云熙
                 </div>
               </div>
             </div>
           </div>
           <div class="dt-info">
-            <img src="../../static/detail/luoli-info.png" alt="">
+            <img src="../../static/detail/linyuhan-info.png" alt="">
+          </div>
+        </div>
+      </div>
+       <!--魔琨-->
+      <div class="swiper-slide">
+        <div class="detail">
+          <div class="dt-header">
+            <img src="../../static/detail/mokun.jpg" alt="">
+            <div class="dt-change">
+              <div class="dt-change-dt">
+                <img src="../../static/detail/tab5.png" class="dt-change-dt">
+                <div class="dt-change-click-right">
+                      <span>
+                        <img src="../../static/detail/right.png" alt="">
+                      </span>
+                </div>
+                <div class="dt-change-click-left">
+                      <span>
+                        <img src="../../static/detail/left.png" alt="">
+                      </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dt-info">
+            <img src="../../static/detail/mokun-info.png" alt="">
           </div>
         </div>
       </div>
@@ -181,21 +174,23 @@ export default {
         prevButton: '.dt-change-click-left',
       })
       $('.dt-change-click-left').click(function(){
-      	console.log(mySwiper)
-        if (self.audiodom.paused) {
-            self.audiodom.play();
-            mySwiper.slidePrev();
-        } else {
-            // 播放中
-        }
+      	mySwiper.slidePrev();
+//    	console.log(mySwiper)
+//      if (self.audiodom.paused) {
+//          self.audiodom.play();
+//          mySwiper.slidePrev();
+//      } else {
+//          // 播放中
+//      }
       })
       $('.dt-change-click-right').click(function(){
-        if (self.audiodom.paused) {
-            self.audiodom.play();
-            mySwiper.slideNext();
-        } else {
-            // 播放中
-        }
+      	mySwiper.slideNext();
+//      if (self.audiodom.paused) {
+//          self.audiodom.play();
+//          mySwiper.slideNext();
+//      } else {
+//          // 播放中
+//      }
       })
   },
   methods:{
@@ -244,27 +239,44 @@ export default {
   .dt-change-click-left{
     position: absolute;
     top: 50%;
-    left:20px;
-    /*line-height: 1;*/
+    left: 0;
+    /* line-height: 1; */
     text-align: center;
+    -webkit-transform: translate(50%,-50%);
     transform: translate(50%,-50%);
-    transform-origin:50% 50%;
-    display:table;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    display: table;
+    width: 50px;
+    height: 43px;
   }
 .dt-change-click-right{
   position: absolute;
-  top: 50%;
-  right:30px;
-  /*line-height: 1;*/
-  text-align: center;
-  transform: translate(50%,-50%);
-  transform-origin:50% 50%;
-  display:table;
+    top: 50%;
+    right: 0;
+    /* line-height: 1; */
+    text-align: center;
+    -webkit-transform: translate(50%,-50%);
+    transform: translate(50%,-50%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    display: table;
+    width: 50px;
+    height: 43px;
 }
 .dt-change-click-right span,.dt-change-click-left span{
-  width: 1rem;
-  display: table-cell;
-  vertical-align: middle;
+    width: 1rem;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+.dt-change-click-left span{
+	
+left: 20%;
+}
+.dt-change-click-right span{
+ right: 40%;
 }
 .dt-change-click-right span img,.dt-change-click-left span img{
   display: block;
