@@ -7,7 +7,7 @@
      <div class="banquana">
     		<img src="../../static/banner/banquan.png" class="banquan"/>
     	</div>
-    	<audio id="clickMusic" src="../../static/clickaudio.mp3" >
+    	<audio id="clickMusic" src="./static/clickaudio.mp3" >
     	</audio>
   </div>
 </template>

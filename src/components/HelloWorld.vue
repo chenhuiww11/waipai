@@ -31,8 +31,7 @@
     <div class="xsnr">
     	<div class="xsnrtitle">
     		<div class="adress">
-    			<img src="../../static/loading/all_13.png" class="pic2"/>
-    			<img src="../../static/loading/all_17.png" class="pic3"/>
+    			<img src="../../static/loading/cc.jpg"/>
     			<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(2)"/>
     		</div>
     	</div>
@@ -80,7 +79,7 @@
         </div>
     </div>
     <div class="returnclick">
-      <audio id="Music" src="../../static/bg.mp3" loop="loop" preload>
+      <audio id="Music" src="./static/bg.mp3" loop="loop" preload>
     	</audio>
      </div>
   </div>
@@ -116,10 +115,10 @@ export default {
 				})
       document.addEventListener("WeixinJSBridgeReady", function () {
 				if(self.isiOS){
-				
+
 					self.audiow.play();
         	self.audiow.pause();
-				} 
+				}
       }, false);
     })
 
@@ -127,11 +126,14 @@ export default {
   methods: {
   	jump(num){
       var self = this
-      setTimeout(function(){
-				console.log(self.headerheight)
-        self.$emit('listenToChildEvent',num)
-      },100)
-
+      if(num == 4){
+        window.sessionStorage.setItem('isnewpage',true)
+        window.location.href = 'https://item.jd.com/12199337.html#product-detail'
+      }else{
+        setTimeout(function(){
+          self.$emit('listenToChildEvent',num)
+        },100)
+      }
   	},
   	show(num){
   		if(num==1){

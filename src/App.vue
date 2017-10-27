@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild"></loading>
+		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>
 		<hello v-show="index==0" v-on:listenToChildEvent="showMsgFromChild" :isShowAudio="showAudio"></hello>
 		<cqb v-show="index==4" v-on:listenToChildEvent="showMsgFromChild"></cqb>
 		<dsj v-show="index==5" v-on:listenToChildEvent="showMsgFromChild"></dsj>
@@ -24,7 +24,8 @@
 				index: 0,
 				count : 0,
         show : false,
-				showAudio : false
+				showAudio : false,
+        isNewPage : true
 			}
 		},
 		components: {
@@ -36,6 +37,11 @@
 			detail,
 
 		},
+    created(){
+      if(window.sessionStorage.getItem('isnewpage')){
+        this.isNewPage = false
+      }
+    },
 		mounted () {
             var _this = this
             let imgs = document.querySelectorAll('img')
