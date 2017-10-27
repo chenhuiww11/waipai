@@ -126,7 +126,7 @@ export default {
   methods: {
   	jump(num){
       var self = this
-      if(num == 4){
+      if(num == 3){
         window.sessionStorage.setItem('isnewpage',true)
         window.location.href = 'https://item.jd.com/12199337.html#product-detail'
       }else{
@@ -176,12 +176,13 @@ export default {
     },
     bgaudio : function(){
       var self=this;
-      self.isbgaudio = !self.isbgaudio
       console.log(self.audiow.paused)
       if (self.audiow.paused) {
         self.audiow.play();
+        self.isbgaudio = true
       } else {
         self.audiow.pause();
+        self.isbgaudio = false
         // 播放中
       }
     }
