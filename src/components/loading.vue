@@ -6,6 +6,8 @@
   		  </div>
   		  <div class="horse">
   		  </div>
+      <audio id="Music" src="./static/bg.mp3" loop="loop" preload>
+      </audio>
   	</div>
 </template>
 
@@ -121,7 +123,7 @@ html,body{
 }
 .horse{
 	position: absolute;
-	top: 70%;
+	bottom: 5%;
 	left:-20px;
 	width:80px;
   height:80px;
@@ -129,13 +131,13 @@ html,body{
   background-size:cover;
   transform: scale(0.6);
   -webkit-transform: scale(0.6);
-	animation:run 1.5s steps(1, start) infinite;
-  -webkit-animation:run 1.5s steps(1, start) infinite;
+	animation:run 1s steps(1, start) infinite;
+  -webkit-animation:run 1s steps(1, start) infinite;
 
 }
 @keyframes run{
             0%{
-                background-position: 0 0;
+                background-position: 0px 0;
             }
             8.333%{
                 background-position: -80px 0;
@@ -171,7 +173,7 @@ html,body{
                 background-position: -880px 0 ;
             }
             100%{
-                background-position: 0 0 ;
+                background-position: 0px 0 ;
             }
         }
         @-webkit-keyframes run{
