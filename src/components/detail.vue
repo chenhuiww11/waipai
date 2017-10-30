@@ -1,42 +1,14 @@
 <template>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <!--牧尘-->
-        <div class="swiper-slide">
-          <div class="detail">
-              <div class="dt-header">
-                <img src="../../static/detail/muchen.jpg" alt="">
-                <div class="dt-change">
-                  <div class="dt-change-dt">
-                    <img src="../../static/detail/luoli.png" class="dt-change-dt">
-                    <div class="dt-change-click-right">
-                      
-                      <span>
-                        <img src="../../static/detail/right.png" alt="">
-                      </span>
-                    </div>
-                    <div class="dt-change-click-left">
-                      <span>
-                        <img src="../../static/detail/left.png" alt="">
-                      </span>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dt-info">
-                  <img src="../../static/detail/muchen_info.png" alt="">
-              </div>
-          </div>
-        </div>
-         <!--洛璃-->
-      <div class="swiper-slide">
+      <!--魔琨-->
+      <div class="swiper-slide" v-for='item in imglist'>
         <div class="detail">
           <div class="dt-header">
-            <img src="../../static/detail/luoli.jpg" alt="">
+            <img :src="item.imgheader" alt="">
             <div class="dt-change">
               <div class="dt-change-dt">
-                <img src="../../static/detail/muyunxi.png" class="dt-change-dt">
+                <img :src="item.imgtab" class="dt-change-dt">
                 <div class="dt-change-click-right">
                       <span>
                         <img src="../../static/detail/right.png" alt="">
@@ -51,89 +23,11 @@
             </div>
           </div>
           <div class="dt-info">
-            <img src="../../static/detail/luoli-info.png" alt="">
+            <img :src="item.imginfo" alt="">
           </div>
         </div>
       </div>
-       <!--牧云熙-->
-        <div class="swiper-slide">
-          <div class="detail">
-              <div class="dt-header">
-                <img src="../../static/detail/muyunxi.jpg" alt="">
-                <div class="dt-change">
-                  <div class="dt-change-dt">
-                    <img src="../../static/detail/tab3.png" class="dt-change-dt">
-                    <div class="dt-change-click-right">
-                      <span>
-                        <img src="../../static/detail/right.png" alt="">
-                      </span>
-                    </div>
-                    <div class="dt-change-click-left">
-                      <span>
-                        <img src="../../static/detail/left.png" alt="">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dt-info">
-                  <img src="../../static/detail/muyunxi-info.png" alt="">
-              </div>
-          </div>
-        </div>
-      <!--林雨寒-->
-      <div class="swiper-slide">
-        <div class="detail">
-          <div class="dt-header">
-            <img src="../../static/detail/linyuhan.jpg" alt="">
-            <div class="dt-change">
-              <div class="dt-change-dt">
-                <img src="../../static/detail/tab4.png" class="dt-change-dt">
-                <div class="dt-change-click-right">
-                	      
-                      <span>
-                        <img src="../../static/detail/right.png" alt="">
-                      </span>
-                </div>
-                <div class="dt-change-click-left">
-                      <span>
-                        <img src="../../static/detail/left.png" alt="">
-                      </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dt-info">
-            <img src="../../static/detail/linyuhan-info.png" alt="">
-          </div>
-        </div>
-      </div>
-       <!--魔琨-->
-      <div class="swiper-slide">
-        <div class="detail">
-          <div class="dt-header">
-            <img src="../../static/detail/mokun.jpg" alt="">
-            <div class="dt-change">
-              <div class="dt-change-dt">
-                <img src="../../static/detail/tab5.png" class="dt-change-dt">
-                <div class="dt-change-click-right">
-                      <span>
-                        <img src="../../static/detail/right.png" alt="">
-                      </span>
-                </div>
-                <div class="dt-change-click-left">
-                      <span>
-                        <img src="../../static/detail/left.png" alt="">
-                      </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dt-info">
-            <img src="../../static/detail/mokun-info.png" alt="">
-          </div>
-        </div>
-      </div>
+      <!--魔琨-->
     </div>
     <img src="../../static/detail/banquan.png" class="dt-info-banquan">
     <div class="returnclick" @click="returnclick">
@@ -144,6 +38,9 @@
     <div class="nav" @click="back">
     	<img src="../../static/jwl/top.png"/>
     </div>
+    <div class="backnav" @click="returnclick">
+	    	<img src="../../static/loading/return.png"/>
+	    </div>
 </div>
 </template>
 
@@ -153,7 +50,59 @@ export default {
   props : ['index'],
   data () {
     return {
-      audiodom : ''
+      audiodom : '',
+      imglist : [
+        {
+          'imgheader' : '../../static/detail/jiangyinian.jpg',
+          'imgtab' : '../../static/detail/jiangyinian.png',
+          'imginfo' : '../../static/detail/jiangyinian-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/muyunxi.jpg',
+          'imgtab' : '../../static/detail/muyunxi.png',
+          'imginfo' : '../../static/detail/muyunxi-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/muchen.jpg',
+          'imgtab' : '../../static/detail/muchen.png',
+          'imginfo' : '../../static/detail/muchen-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/luoli.jpg',
+          'imgtab' : '../../static/detail/luoli.png',
+          'imginfo' : '../../static/detail/luoli-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/lindong.jpg',
+          'imgtab' : '../../static/detail/lindong.png',
+          'imginfo' : '../../static/detail/lindong-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/xiaoyan.jpg',
+          'imgtab' : '../../static/detail/xiaoyan.png',
+          'imginfo' : '../../static/detail/xiaoyan-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/qinyuan.jpg',
+          'imgtab' : '../../static/detail/qinyuan.png',
+          'imginfo' : '../../static/detail/qinyuan-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/tangxiuya.jpg',
+          'imgtab' : '../../static/detail/tangxiuya.png',
+          'imginfo' : '../../static/detail/tangxiuya-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/linyuhan.jpg',
+          'imgtab' : '../../static/detail/linyuhan.png',
+          'imginfo' : '../../static/detail/linyuhan-info.png'
+        },
+        {
+          'imgheader' : '../../static/detail/mokun.jpg',
+          'imgtab' : '../../static/detail/mokun.png',
+          'imginfo' : '../../static/detail/mokun-info.png'
+        }
+      ]
     }
   },
   created(){
@@ -394,7 +343,7 @@ export default {
   }
   .nav{
 	position: fixed;
-	top: 50%;
+	top: 80%;
 	right: 10px;
 	width:44px;
 	display: none;
