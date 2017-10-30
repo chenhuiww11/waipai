@@ -103,7 +103,7 @@ div.pinch-zoom{
 }
 .nav{
 	position: fixed;
-	top: 50%;
+	top: 80%;
 	right: 10px;
 	width:44px;
 	display: none;
@@ -114,4 +114,11 @@ div.pinch-zoom{
     left: 20px;
     top: 20px;
     width: 4rem;
-}       
+} 
+.backnav{
+	position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 4rem;
+    display: none;
+}        
