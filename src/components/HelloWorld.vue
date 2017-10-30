@@ -345,32 +345,32 @@ export default {
     opacity: 0;
   }
 }
-@-webkit-keyframes twinkling{   /*透明度由0到1*/  
-   0%{  
-        opacity:.9;                /*透明度为0*/  
-				transform:scale(.8,.8); 
-    }  
+@-webkit-keyframes twinkling{   /*透明度由0到1*/
+   0%{
+        opacity:.9;                /*透明度为0*/
+				transform:scale(.8,.8);
+    }
 		50%{
-			opacity:1;              /*透明度为1*/  
-				transform:scale(1.2,1.2); 
+			opacity:1;              /*透明度为1*/
+				transform:scale(1.2,1.2);
 		}
-    100%{  
-        opacity:.9;              /*透明度为1*/  
-				transform:scale(.8,.8); 
-    } 
-}  
-@keyframes twinkling{   /*透明度由0到1*/  
-    0%{  
-        opacity:.9;                /*透明度为0*/  
-				transform:scale(.8,.8); 
-    }  
+    100%{
+        opacity:.9;              /*透明度为1*/
+				transform:scale(.8,.8);
+    }
+}
+@keyframes twinkling{   /*透明度由0到1*/
+    0%{
+        opacity:.9;                /*透明度为0*/
+				transform:scale(.8,.8);
+    }
 		50%{
-			opacity:1;              /*透明度为1*/  
-				transform:scale(1.2,1.2); 
+			opacity:1;              /*透明度为1*/
+				transform:scale(1.2,1.2);
 		}
-    100%{  
-        opacity:.9;              /*透明度为1*/  
-				transform:scale(.8,.8); 
-    }  
-}  
+    100%{
+        opacity:.9;              /*透明度为1*/
+				transform:scale(.8,.8);
+    }
+}
 </style>
