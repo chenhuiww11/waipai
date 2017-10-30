@@ -33,7 +33,7 @@
     		<div class="adress">
     			<img src="../../static/loading/cc.jpg"/>
     			<div class="shanshuo">
-    				<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(2)"/>
+    				<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(1)"/>
     				<img src="../../static/loading/dian.png" class="dian"/>
     			</div>
     		</div>
@@ -116,7 +116,7 @@ export default {
       self.imgwidth=self.picwidth/5*0.7
   		$('.pic').css('width',self.imgwidth)
 				$('.page').click(function(){
-					$('.page').hide();
+					$('.page').fadeOut(500);
 					event.preventDefault();
 				})
       document.addEventListener("WeixinJSBridgeReady", function () {
@@ -159,14 +159,16 @@ export default {
   		$('.pinch-zoom').each(function () {
 		                new RTP.PinchZoom($(this), {});
 		            });
-					$('.page').show();
+					$('.page').fadeIn(500);
   	},
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
     	if(window.scrollY>680){
+    		$('.backnav').show();
     		$('.nav').show();
     	}else{
     		$('.nav').hide();
+    		$('.backnav').hide();
     	}
   	},
   	back(){
@@ -299,13 +301,6 @@ export default {
 }
 .banquan{
 	width: 80%;
-}
-.nav{
-	position: fixed;
-	top: 50%;
-	right: 10px;
-	width:44px;
-	display: none;
 }
 .voice{
 	position: absolute;

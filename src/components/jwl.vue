@@ -15,6 +15,9 @@
 	    	<img src="../../static/jwl/top.png"/>
 
 	    </div>
+	    <div class="backnav" @click="back()">
+	    	<img src="../../static/loading/return.png"/>
+	    </div>
     <audio id="clickMusic" src="./static/clickaudio.mp3" >
     </audio>
   </div>
@@ -41,20 +44,9 @@ export default {
 					self.$emit('listenToChildEvent',0)
 				},300)
   	},
-  	handleScroll () {
-    	this.scrolled = window.scrollY > 0;
-    	if(window.scrollY>680){
-    		$('.nav').show();
-    	}else{
-    		$('.nav').hide();
-    	}
-  	},
   	jwlback(){
   		$('body,html').animate({ scrollTop: 0 }, 200);
   	},
-  	mounted(){
-  		window.addEventListener('scroll', this.handleScroll);
-  	}
   }
 }
 </script>
@@ -73,21 +65,7 @@ export default {
 	width: 84%;
 	margin-bottom: 80px;
 }
-/*.back{
-	position: absolute;
-	left: 10px;
-	top: 10px;
-	width: 44px;
-}*/
 .nobottom{
 	margin-bottom: 0;
-}
-.nav{
-	position: fixed;
-	top: 50%;
-	right: 10px;
-	width:44px;
-	display: none;
-	z-index: 2;
 }
 </style>
