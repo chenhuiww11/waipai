@@ -53,54 +53,54 @@ export default {
       audiodom : '',
       imglist : [
         {
-          'imgheader' : '../../static/detail/jiangyinian.jpg',
-          'imgtab' : '../../static/detail/jiangyinian.png',
-          'imginfo' : '../../static/detail/jiangyinian-info.png'
+          'imgheader' : './static/detail/jiangyinian.jpg',
+          'imgtab' : './static/detail/jiangyinian.png',
+          'imginfo' : './static/detail/jiangyinian-info.png'
         },
         {
-          'imgheader' : '../../static/detail/muyunxi.jpg',
-          'imgtab' : '../../static/detail/muyunxi.png',
-          'imginfo' : '../../static/detail/muyunxi-info.png'
+          'imgheader' : './static/detail/muyunxi.jpg',
+          'imgtab' : './static/detail/muyunxi.png',
+          'imginfo' : './static/detail/muyunxi-info.png'
         },
         {
-          'imgheader' : '../../static/detail/muchen.jpg',
-          'imgtab' : '../../static/detail/muchen.png',
-          'imginfo' : '../../static/detail/muchen-info.png'
+          'imgheader' : './static/detail/muchen.jpg',
+          'imgtab' : './static/detail/muchen.png',
+          'imginfo' : './static/detail/muchen-info.png'
         },
         {
-          'imgheader' : '../../static/detail/luoli.jpg',
-          'imgtab' : '../../static/detail/luoli.png',
-          'imginfo' : '../../static/detail/luoli-info.png'
+          'imgheader' : './static/detail/luoli.jpg',
+          'imgtab' : './static/detail/luoli.png',
+          'imginfo' : './static/detail/luoli-info.png'
         },
         {
-          'imgheader' : '../../static/detail/lindong.jpg',
-          'imgtab' : '../../static/detail/lindong.png',
-          'imginfo' : '../../static/detail/lindong-info.png'
+          'imgheader' : './static/detail/lindong.jpg',
+          'imgtab' : './static/detail/lindong.png',
+          'imginfo' : './static/detail/lindong-info.png'
         },
         {
-          'imgheader' : '../../static/detail/xiaoyan.jpg',
-          'imgtab' : '../../static/detail/xiaoyan.png',
-          'imginfo' : '../../static/detail/xiaoyan-info.png'
+          'imgheader' : './static/detail/xiaoyan.jpg',
+          'imgtab' : './static/detail/xiaoyan.png',
+          'imginfo' : './static/detail/xiaoyan-info.png'
         },
         {
-          'imgheader' : '../../static/detail/qinyuan.jpg',
-          'imgtab' : '../../static/detail/qinyuan.png',
-          'imginfo' : '../../static/detail/qinyuan-info.png'
+          'imgheader' : './static/detail/qinyuan.jpg',
+          'imgtab' : './static/detail/qinyuan.png',
+          'imginfo' : './static/detail/qinyuan-info.png'
         },
         {
-          'imgheader' : '../../static/detail/tangxiuya.jpg',
-          'imgtab' : '../../static/detail/tangxiuya.png',
-          'imginfo' : '../../static/detail/tangxiuya-info.png'
+          'imgheader' : './static/detail/tangxiuya.jpg',
+          'imgtab' : './static/detail/tangxiuya.png',
+          'imginfo' : './static/detail/tangxiuya-info.png'
         },
         {
-          'imgheader' : '../../static/detail/linyuhan.jpg',
-          'imgtab' : '../../static/detail/linyuhan.png',
-          'imginfo' : '../../static/detail/linyuhan-info.png'
+          'imgheader' : './static/detail/linyuhan.jpg',
+          'imgtab' : './static/detail/linyuhan.png',
+          'imginfo' : './static/detail/linyuhan-info.png'
         },
         {
-          'imgheader' : '../../static/detail/mokun.jpg',
-          'imgtab' : '../../static/detail/mokun.png',
-          'imginfo' : '../../static/detail/mokun-info.png'
+          'imgheader' : './static/detail/mokun.jpg',
+          'imgtab' : './static/detail/mokun.png',
+          'imginfo' : './static/detail/mokun-info.png'
         }
       ]
     }
