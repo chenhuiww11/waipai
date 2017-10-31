@@ -63,12 +63,12 @@ export default {
 	top: 10px;
 	width: 44px;
 }*/
-.nav{
+/*.nav{
   position: fixed;
   top: 50%;
   right: 10px;
   width:44px;
   display: none;
   z-index: 9999;
-}
+}*/
 </style>
