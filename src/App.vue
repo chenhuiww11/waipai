@@ -66,21 +66,15 @@
         }else{
           this.index = data
           if(data == 0){
-						// alert(window.sessionStorage.getItem('headerheight'))
-						console.log(window.sessionStorage.getItem('headerheight'))
 						if(window.sessionStorage.getItem('headerheight')==0){
-						
 							window.sessionStorage.setItem('headerheight',window.sessionStorage.getItem('headerheighttwo'))
-						
 						}
 						setTimeout(function(){
-$('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
+              $('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
 						},0)
-            
           }else{
             $('body,html').animate({ scrollTop: 0 },0);
           }
-
         }
       }
     },

@@ -123,23 +123,10 @@ export default {
         prevButton: '.dt-change-click-left',
       })
       $('.dt-change-click-left').click(function(){
-        console.log(mySwiper)
         mySwiper.slidePrev();
-        // if (self.audiodom.paused) {
-        //     self.audiodom.play();
-        //     mySwiper.slidePrev();
-        // } else {
-        //     // 播放中
-        // }
       })
       $('.dt-change-click-right').click(function(){
          mySwiper.slideNext();
-        // if (self.audiodom.paused) {
-        //     self.audiodom.play();
-        //     mySwiper.slideNext();
-        // } else {
-        //     // 播放中
-        // }
       })
   },
   methods:{
@@ -217,7 +204,7 @@ export default {
     position: relative;
 }
 .dt-change-click-left span{
-	
+
 /* left: 20%; */
 }
 .dt-change-click-right span{
