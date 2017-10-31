@@ -11,6 +11,9 @@
     <div class="nav" @click="back">
       <img src="../../static/jwl/top.png"/>
     </div>
+    <div class="backnav" @click="backpage()">
+	    	<img src="../../static/loading/return.png"/>
+	    </div>
   </div>
 </template>
 

@@ -1,0 +1,20 @@
+.viewer {
+    -ms-touch-action: none;
+    position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	height: 100%!important;
+	width: 100%;
+}
+.viewer>img {
+    image-orientation: from-image;
+}
+.iviewer_common {
+    position:absolute;
+    bottom:10px;
+    border: 1px  solid #000;
+    height: 28px;
+    z-index: 5000;
+}

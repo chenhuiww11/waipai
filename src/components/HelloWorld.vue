@@ -72,13 +72,14 @@
 
 
     <!--导航-->
+    
     <div class="nav" @click="back()">
     	<img src="../../static/jwl/top.png"/>
     </div>
     <!--小图放大图-->
     <div class="page">
         <div class="pinch-zoom">
-            <img src="../../static/banner/1.jpg" class="pagebg"/>
+            <img src="../../static/banner/2.jpg" class="pagebg"/>
         </div>
     </div>
     <div class="returnclick">
@@ -126,6 +127,10 @@ export default {
         	self.audiow.pause();
 				}
       }, false);
+      $('.pinch-zoom').each(function () {
+		                new RTP.PinchZoom($(this), {});
+			});
+
     })
 
   },
@@ -143,22 +148,21 @@ export default {
       // }
   	},
   	show(num){
-  		if(num==1){
-  			$('.pagebg').attr('src','./static/banner/1.jpg')
-  		}else if(num==2){
-  			$('.pagebg').attr('src','./static/banner/2.jpg')
-  		}else if(num==3){
-  			$('.pagebg').attr('src','./static/banner/3.jpg')
-  		}else if(num==4){
-  			$('.pagebg').attr('src','./static/banner/4.jpg')
-  		}else if(num==5){
-  			$('.pagebg').attr('src','./static/banner/5.jpg')
-  		}else if(num==6){
-  			$('.pagebg').attr('src','./static/banner/moreadress.png')
-  		}
-  		$('.pinch-zoom').each(function () {
-		                new RTP.PinchZoom($(this), {});
-		            });
+  		 var self = this
+      self.audiodom.play();
+		if(num==1){
+			$('.pagebg').attr('src','./static/banner/1.jpg')
+		}else if(num==2){
+			$('.pagebg').attr('src','./static/banner/2.jpg')
+		}else if(num==3){
+			$('.pagebg').attr('src','./static/banner/3.jpg')
+		}else if(num==4){
+			$('.pagebg').attr('src','./static/banner/4.jpg')
+		}else if(num==5){
+			$('.pagebg').attr('src','./static/banner/5.jpg')
+		}else if(num==6){
+			$('.pagebg').attr('src','./static/banner/moreadress.jpg')
+		}
 					$('.page').fadeIn(500);
   	},
   	handleScroll () {
@@ -227,6 +231,8 @@ export default {
   background-size: 100px 100px;
 	width: 100%;
 	min-height: 100%;
+	transform-style: preserve-3d;
+    position: relative;
 }
 .bigbanner{
 	position: relative;

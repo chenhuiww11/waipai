@@ -164,7 +164,7 @@ export default {
 .dt-change{
   padding: 0 10px;
   position: absolute;
-  bottom: 35px;
+  bottom: -18px;
 }
   .dt-change-dt{
     color: #ffffff;
@@ -317,6 +317,7 @@ export default {
 .dt-info{
   width: 100%;
   padding-bottom: 100px;
+  padding-top: 40px;
 }
   .dt-info-banquan{
     width: 80%;
@@ -328,12 +329,5 @@ export default {
     margin: auto auto;
     z-index: 8000;
   }
-  .nav{
-	position: fixed;
-	top: 80%;
-	right: 10px;
-	width:44px;
-	display: none;
-  z-index: 9999;
-}
+
 </style>

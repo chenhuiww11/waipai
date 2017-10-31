@@ -77,10 +77,11 @@ img {
 
  div.pinch-zoom,
 div.pinch-zoom img{
-    width: 100%;
-    -webkit-user-drag: none;
+	position: relative;
 }
 div.pinch-zoom>img{
+	 width: 100%;
+    -webkit-user-drag: none;
 	padding-top: 50%;
 }
 .page{
