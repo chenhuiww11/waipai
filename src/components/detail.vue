@@ -123,9 +123,11 @@ export default {
         prevButton: '.dt-change-click-left',
       })
       $('.dt-change-click-left').click(function(){
+      	 self.audiodom.play();
         mySwiper.slidePrev();
       })
       $('.dt-change-click-right').click(function(){
+      	 self.audiodom.play();
          mySwiper.slideNext();
       })
   },

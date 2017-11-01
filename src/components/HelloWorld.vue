@@ -3,10 +3,10 @@
   	<div class="bigbanner">
     	<img src="../../static/loading/banner.png"/>
     	<img src="../../static/banner/arrow.png" class="arrow"/>
-    	<div class="voice" @click="bgaudio" id="bgaudioclick">
+    	<!--<div class="voice" @click="bgaudio" id="bgaudioclick">
     		<img src="../../static/banner/voice.png" v-show="isbgaudio"/>
         <img src="../../static/banner/voice-close.png" v-show="!isbgaudio"/>
-    	</div>
+    	</div>-->
     </div>
     <div class="content">
     	  <ul class="contentlist">
@@ -30,42 +30,55 @@
     </div>
     <div class="xsnr">
     	<div class="xsnrtitle">
-    		<div class="adress">
-    			<img src="../../static/newpic/1.png"/>
-    			<div class="shanshuo">
-    				<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(1)"/>
+    		<div class="adress allshicha">
+    			<img src="../../static/newpic/1.png" class="shicha"/>
+    			<div class="shanshuo allshicha">
+    				<img src="../../static/newpic/shan2.png" class="pic5 sc"/>
+    				<img src="../../static/newpic/tianluo.png" class="pic4 sc1" @click="show(1)"/>
     				<img src="../../static/loading/dian.png" class="dian"/>
     			</div>
     		</div>
     	</div>
-    	<div class="xsnrtitle nobg">
-    		<div class="adresstwo">
-    			<img src="../../static/banner/banner_16.jpg"/>
-    			<img src="../../static/banner/banner_17.jpg" class="pic4" @click="show(2)"/>
+    	<div class="xsnrtitle">
+    		<div class="adress  nobg">
+    			<img src="../../static/newpic/wujing.png" class="shicha"/>
+    			<div class="shanshuo allshicha">
+    				<img src="../../static/newpic/04.png" class="pic5 sc"/>
+    				<img src="../../static/newpic/wujingditu.png" class="pic4 sc1" @click="show(2)"/>
+    			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
-    		<div class="adresstwo">
-    			<img src="../../static/banner/banner_18.jpg"/>
-    			<img src="../../static/banner/banner_19.jpg" class="pic4" @click="show(3)"/>
+    		<div class="adress  nobg">
+    			<img src="../../static/newpic/wujinghuoyutext.png" class="shicha"/>
+    			<div class="shanshuo allshicha">
+    				<img src="../../static/newpic/06.png" class="pic5 sc"/>
+    				<img src="../../static/newpic/wujinghuoyu.png" class="pic4" @click="show(3)"/>
+    			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
-    		<div class="adresstwo">
-    			<img src="../../static/banner/banner_20.jpg"/>
-    			<img src="../../static/banner/banner_21.jpg" class="pic4" @click="show(4)"/>
+    		<div class="adress  nobg">
+    			<img src="../../static/newpic/beicangdalutext.png" class="shicha"/>
+    			<div class="shanshuo allshicha">
+    				<img src="../../static/newpic/08.png" class="pic5 sc2"/>
+    				<img src="../../static/newpic/beicangdalu.png" class="pic4 sc3" @click="show(4)"/>
+    			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
-    		<div class="adresstwo">
-    			<img src="../../static/banner/banner_22.jpg"/>
-    			<img src="../../static/banner/banner_23.jpg" class="pic4" @click="show(5)"/>
+    		<div class="adress  nobg">
+    			<img src="../../static/newpic/nanmingdalutext.png" class="shicha"/>
+    			<div class="shanshuo allshicha">
+    				<img src="../../static/newpic/10.png" class="pic5 sc2"/>
+    				<img src="../../static/newpic/nanmingdalu.png" class="pic4 sc3" @click="show(4)"/>
+    			</div>
     		</div>
     	</div>
-    	<div class="more">
+    	<div class="more allshicha">
     		<img src="../../static/banner/xianshi.png" class="moreimg" @click="show(6)"/>
     	</div>
-    	<div class="banquana">
+    	<div class="banquana allshicha">
     		<img src="../../static/banner/banquan.png" class="banquan"/>
     	</div>
     </div>
@@ -119,6 +132,7 @@ export default {
       self.imgwidth=self.picwidth/5*0.7
   		$('.pic').css('width',self.imgwidth)
 				$('.page').click(function(){
+					$("body").unbind('touchmove');
 					$('.page').fadeOut(500);
 					event.preventDefault();
 				})
@@ -152,6 +166,7 @@ export default {
   	show(num){
   		 var self = this
       self.audiodom.play();
+      $("body").bind('touchmove',function(event) { event.preventDefault(); }, false);
 		if(num==1){
 			$('.pagebg').attr('src','./static/banner/1.jpg')
 		}else if(num==2){
@@ -169,18 +184,27 @@ export default {
   	},
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
-    	if(window.scrollY>0){
-    		var ju=window.scrollY*0.1
-    		var jua=window.scrollY*0.2
+    	if(window.scrollY>600){
+    		var ju=window.scrollY*0.01
+    		var jua=window.scrollY*0.06
+    		var ju1=window.scrollY*0.06
+    		var jua2=window.scrollY*0.03
+//  		console.log(window.scrollY)
+    		var jua3=window.scrollY*0.0314
+    		var jua4=window.scrollY*0.025
+    		$('.allshicha').css("top",-ju+"px");
+    	$('.shicha').css("top",-jua+"px");
+    		$('.sc').css("top",-ju1+"px");
+    	$('.sc1').css("top",-jua2+"px");
+    	$('.sc2').css("top",-jua3+"px");
+    	$('.sc3').css("top",-jua4+"px");
     	}
-    	$('.hello').css("background-position-y",-ju+"px");
-    	$('.xsnr').css("top",-jua+"px");
     	if(window.scrollY>680){
-    		$('.backnav').show();
-    		$('.nav').show();
+    		$('.backnav').fadeIn(500);
+    		$('.nav').fadeIn(500);
     	}else{
-    		$('.nav').hide();
-    		$('.backnav').hide();
+    		$('.nav').fadeOut(500);
+    		$('.backnav').fadeOut(500);
     	}
   	},
   	back(){
@@ -225,7 +249,7 @@ export default {
     isShowAudio : function(){
       var self = this
       if(self.isShowAudio){
-        self.audiow.play();
+//      self.audiow.play();
       }
     }
   }
@@ -277,22 +301,29 @@ export default {
 	position: relative;
 }
 .xsnrtitle{
+	    margin-bottom: 60px;
 }
 .adress{
 	position: relative;
-	top: 60px;
 	text-align: center;
-	background: red;
+	background: url(../../static/newpic/shan.png) no-repeat;
+	background-size:100%;
+	box-sizing: border-box;
+	padding-top: 116px;
 }
 .adress>img{
 	width: 80%;
 }
+.shicha{
+	position: relative;
+	margin-bottom: 40px;
+}
+.sc1,.sc3,.sc2{
+	position: relative;
+}
 .adresstwo{
 	position: relative;
 	text-align: center;
-}
-.adresstwo>img{
-	width: 50%;
 }
 .nobg{
 	background: none;
@@ -332,6 +363,15 @@ export default {
 }
 .shanshuo{
 	position: relative;
+	/*background: url(../../static/newpic/shan2.jpg) no-repeat;
+	background-size:100%;*/
+	margin-top: 20px;
+}
+.pic5{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
 }
 .dian{
 	  position: absolute;

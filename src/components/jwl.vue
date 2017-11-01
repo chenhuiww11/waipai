@@ -1,8 +1,8 @@
 <template>
   <div class="jwl">
      <img src="../../static/jwl/jwlbg.jpg"/>
-     <img src="../../static/jwl/1_01.png" class="jwlpic"/>
-		 <img src="../../static/jwl/1_03.png" class="jwlpic"/>
+     <!--<img src="../../static/jwl/1_01.png" class="jwlpic"/>-->
+		 <!--<img src="../../static/jwl/1_03.png" class="jwlpic"/>-->
 		 <img src="../../static/jwl/1_05.png" class="jwlpic"/>
 		 <img src="../../static/jwl/1_07.png" class="jwlpic"/>
 		 <img src="../../static/jwl/1_09.png" class="jwlpic nobottom"/>
