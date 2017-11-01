@@ -31,7 +31,7 @@
     <div class="xsnr">
     	<div class="xsnrtitle">
     		<div class="adress">
-    			<img src="../../static/loading/cc.jpg"/>
+    			<img src="../../static/newpic/1.png"/>
     			<div class="shanshuo">
     				<img src="../../static/banner/tianluo_02.jpg" class="pic4" @click="show(1)"/>
     				<img src="../../static/loading/dian.png" class="dian"/>
@@ -105,7 +105,9 @@ export default {
 			isAndroid:'',
 			isiOS:'',
 			headerheight:0,
-      clickMusic : ''
+      clickMusic : '',
+      chushi:true,
+      
     }
   },
   created(){
@@ -161,12 +163,18 @@ export default {
 		}else if(num==5){
 			$('.pagebg').attr('src','./static/banner/5.jpg')
 		}else if(num==6){
-			$('.pagebg').attr('src','./static/banner/moreadress.jpg')
+			$('.pagebg').attr('src','./static/banner/moreadress.png')
 		}
 					$('.page').fadeIn(500);
   	},
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
+    	if(window.scrollY>0){
+    		var ju=window.scrollY*0.1
+    		var jua=window.scrollY*0.2
+    	}
+    	$('.hello').css("background-position-y",-ju+"px");
+    	$('.xsnr').css("top",-jua+"px");
     	if(window.scrollY>680){
     		$('.backnav').show();
     		$('.nav').show();
@@ -231,6 +239,7 @@ export default {
   background-size: 100px 100px;
 	width: 100%;
 	min-height: 100%;
+	background-attachment:fixed;
 }
 .bigbanner{
 	position: relative;
@@ -265,6 +274,7 @@ export default {
 }
 .xsnr{
 	margin-top: 100px;
+	position: relative;
 }
 .xsnrtitle{
 }
@@ -272,10 +282,17 @@ export default {
 	position: relative;
 	top: 60px;
 	text-align: center;
+	background: red;
+}
+.adress>img{
+	width: 80%;
 }
 .adresstwo{
 	position: relative;
 	text-align: center;
+}
+.adresstwo>img{
+	width: 50%;
 }
 .nobg{
 	background: none;
@@ -289,6 +306,7 @@ export default {
 }
 .pic4{
 	width:100%;
+	    /*-webkit-animation: twinkling2 2s infinite linear;*/
 }
 .more{
 	text-align: center;
@@ -343,6 +361,20 @@ export default {
     -webkit-transform:translateY(0px);
     opacity: 0;
   }
+}
+@-webkit-keyframes twinkling2{   /*透明度由0到1*/
+   0%{
+        opacity:.9;                /*透明度为0*/
+				transform:scale(1,1);
+    }
+		50%{
+			opacity:1;              /*透明度为1*/
+				transform:scale(1.05,1.05);
+		}
+    100%{
+        opacity:.9;              /*透明度为1*/
+				transform:scale(1,1);
+    }
 }
 @-webkit-keyframes twinkling{   /*透明度由0到1*/
    0%{

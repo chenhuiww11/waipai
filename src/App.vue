@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>
+		<!--<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>-->
 		<hello v-show="index==0" v-on:listenToChildEvent="showMsgFromChild" :isShowAudio="showAudio"></hello>
 		<cqb v-show="index==4" v-on:listenToChildEvent="showMsgFromChild"></cqb>
 		<dsj v-show="index==5" v-on:listenToChildEvent="showMsgFromChild"></dsj>
@@ -49,7 +49,6 @@
 		mounted () {
             var _this = this
             let imgs = document.querySelectorAll('img')
-//          console.log(imgs)
             Array.from(imgs).forEach((item)=>{
                 let img = new Image()
                 img.onload = ()=>{
@@ -80,7 +79,7 @@
     },
     watch : {
 	        count (val,oldval) {
-	            if(val >= 74){
+	            if(val >= 100){
 	                this.show = true
 	                //然后可以对后台发送一些ajax操作
 	            }
