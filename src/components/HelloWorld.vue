@@ -79,7 +79,7 @@
     <!--小图放大图-->
     <div class="page">
         <div class="pinch-zoom">
-            <img src="../../static/banner/2.jpg" class="pagebg"/>
+            <img src="../../static/banner/1.jpg" class="pagebg"/>
         </div>
     </div>
     <div class="returnclick">
@@ -231,8 +231,6 @@ export default {
   background-size: 100px 100px;
 	width: 100%;
 	min-height: 100%;
-	transform-style: preserve-3d;
-    position: relative;
 }
 .bigbanner{
 	position: relative;
