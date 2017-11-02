@@ -159,7 +159,7 @@ export default {
             }  
             setTimeout(function(){t = p;},0);         
     });  
-  	
+  	console.log(document.body.clientWidth)
   	
   	
   	
@@ -209,7 +209,7 @@ export default {
 	  	}else if(document.body.clientWidth>=375&&document.body.clientWidth<414){
 	  		self.xishu=1
 	  	}else{
-	  		self.xishu=1.2
+	  		self.xishu=1.05
 	  		 $('.hello').css('height','3700px')
 	  	}
 				
@@ -258,7 +258,7 @@ export default {
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
 //  	$("body").unbind('touchmove');
-//  	console.log(window.scrollY )
+    	console.log(window.scrollY )
     	var self=this;
     	
     	var ju=window.scrollY*0.02
@@ -271,31 +271,31 @@ export default {
     		
     	}else if(window.scrollY>980*self.xishu&&window.scrollY<1760*self.xishu){
     			if(self.fangxiang){
-    			self.speed1=self.speed1+0.2
+    			self.speed1=self.speed1+0.5
     		}else{
-    			self.speed1=self.speed1-0.2
+    			self.speed1=self.speed1-0.5
     		}
     		$('.sc1').css("top",-self.speed1+"px");
-    	}else if(window.scrollY>1600*self.xishu&&window.scrollY<2163*self.xishu){
+    	}else if(window.scrollY>1200*self.xishu&&window.scrollY<2300*self.xishu){
     		if(self.fangxiang){
-    			self.speed=self.speed+0.2
+    			self.speed=self.speed+0.5
     		}else{
-    			self.speed=self.speed-0.2
+    			self.speed=self.speed-0.5
     		}
     		$('.sc').css("top",-self.speed+"px");
     	}
     	else if(window.scrollY>2163*self.xishu&&window.scrollY<2645*self.xishu){
     		if(self.fangxiang){
-    			self.speed2=self.speed2+0.2
+    			self.speed2=self.speed2+0.5
     		}else{
-    			self.speed2=self.speed2-0.2
+    			self.speed2=self.speed2-0.5
     		}
     		$('.sc3').css("top",-self.speed2+"px");
-    	}else if(window.scrollY>2638*self.xishu&&window.scrollY<3440*self.xishu){
+    	}else if(window.scrollY>2500*self.xishu&&window.scrollY<3600*self.xishu){
     		if(self.fangxiang){
-    			self.speed3=self.speed3+0.2
+    			self.speed3=self.speed3+0.5
     		}else{
-    			self.speed3=self.speed3-0.2
+    			self.speed3=self.speed3-0.5
     		}
     		$('.sc4').css("top",-self.speed3+"px");
     	}
