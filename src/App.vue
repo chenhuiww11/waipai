@@ -59,7 +59,6 @@
         },
     methods:{
     	showMsgFromChild : function(data){
-        console.log(data)
         if(data == 9){
           this.showAudio = true
         }else{

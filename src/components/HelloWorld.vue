@@ -28,57 +28,57 @@
 
     	  </ul>
     </div>
-    <div class="xsnr">
+    <div class="xsnr shicha">
     	<div class="xsnrtitle">
-    		<div class="adress allshicha">
-    			<img src="../../static/newpic/1.png" class="shicha"/>
-    			<div class="shanshuo allshicha">
-    				<img src="../../static/newpic/shan2.png" class="pic5 sc"/>
-    				<img src="../../static/newpic/tianluo.png" class="pic4 sc1" @click="show(1)"/>
+    		<div class="adress">
+    			<img src="../../static/newpic/1.png" class="shicha" style="padding-top: 110px;"/>
+    			<div class="shanshuo" style="margin-top: 0;">
+    				<img src="../../static/newpic/shan2.png" class="pic5"/>
+    				<img src="../../static/newpic/tianluo.png" class="pic4 allshicha" @click="show(1)"/>
     				<img src="../../static/loading/dian.png" class="dian"/>
     			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle">
     		<div class="adress  nobg">
-    			<img src="../../static/newpic/wujing.png" class="shicha"/>
-    			<div class="shanshuo allshicha">
-    				<img src="../../static/newpic/04.png" class="pic5 sc"/>
+    			<img src="../../static/newpic/wujing.png" class="allshicha"/>
+    			<div class="shanshuo ">
+    				<img src="../../static/newpic/04.png" class="pic5"/>
     				<img src="../../static/newpic/wujingditu.png" class="pic4 sc1" @click="show(2)"/>
     			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
-    		<div class="adress  nobg">
-    			<img src="../../static/newpic/wujinghuoyutext.png" class="shicha"/>
-    			<div class="shanshuo allshicha">
-    				<img src="../../static/newpic/06.png" class="pic5 sc"/>
-    				<img src="../../static/newpic/wujinghuoyu.png" class="pic4" @click="show(3)"/>
+    		<div class="adress  nobg wujinghuoyu">
+    			<img src="../../static/newpic/wujinghuoyutext.png" class="allshicha"/>
+    			<div class="shanshuo wujin">
+    				<img src="../../static/newpic/06.png" class="pic5" style="position: absolute;left: 0;"/>
+    				<img src="../../static/newpic/wujinghuoyu.png" @click="show(3)" class="pic4 sc"/>
     			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
     		<div class="adress  nobg">
-    			<img src="../../static/newpic/beicangdalutext.png" class="shicha"/>
-    			<div class="shanshuo allshicha">
-    				<img src="../../static/newpic/08.png" class="pic5 sc2"/>
+    			<img src="../../static/newpic/beicangdalutext.png" class="allshicha"/>
+    			<div class="shanshuo ">
+    				<img src="../../static/newpic/08.png" class="pic5"/>
     				<img src="../../static/newpic/beicangdalu.png" class="pic4 sc3" @click="show(4)"/>
     			</div>
     		</div>
     	</div>
     	<div class="xsnrtitle nobg">
     		<div class="adress  nobg">
-    			<img src="../../static/newpic/nanmingdalutext.png" class="shicha"/>
-    			<div class="shanshuo allshicha">
-    				<img src="../../static/newpic/10.png" class="pic5 sc2"/>
-    				<img src="../../static/newpic/nanmingdalu.png" class="pic4 sc3" @click="show(4)"/>
+    			<img src="../../static/newpic/nanmingdalutext.png" class="allshicha"/>
+    			<div class="shanshuo ">
+    				<img src="../../static/newpic/10.png" class="pic5"/>
+    				<img src="../../static/newpic/nanmingdalu.png" class="pic4 sc4" @click="show(4)"/>
     			</div>
     		</div>
     	</div>
-    	<div class="more allshicha">
+    	<div class="more">
     		<img src="../../static/banner/xianshi.png" class="moreimg" @click="show(6)"/>
     	</div>
-    	<div class="banquana allshicha">
+    	<div class="banquana">
     		<img src="../../static/banner/banquan.png" class="banquan"/>
     	</div>
     </div>
@@ -120,6 +120,22 @@ export default {
 			headerheight:0,
       clickMusic : '',
       chushi:true,
+      speed:1,//初始速度
+      speed1:1,//
+      speed2:13,//
+      speed3:1,
+      wujinghuoyu:'',//高度
+      shouyi:{
+      	startX:0,
+      	startY:0,
+      	moveEndX:0,
+      	moveEndY:0,
+      	x:0,
+      	y:0,
+      	fangxiang:true
+      	
+      },//
+      xishu:1,//屏幕系数
       
     }
   },
@@ -128,6 +144,48 @@ export default {
 		this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
 		this.isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
   	var self=this;
+  	
+  	var p=0,t=0;  
+  
+    $(window).scroll(function(e){  
+            p = $(this).scrollTop();  
+              
+            if(t<=p){//下滚  
+               self.fangxiang=true
+            }  
+              
+            else{//上滚  
+               self.fangxiang=false
+            }  
+            setTimeout(function(){t = p;},0);         
+    });  
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
   	self.$nextTick(function(){
       self.imgwidth=self.picwidth/5*0.7
   		$('.pic').css('width',self.imgwidth)
@@ -146,6 +204,21 @@ export default {
       $('.pinch-zoom').each(function () {
 		                new RTP.PinchZoom($(this), {});
 			});
+      if(document.body.clientWidth<375){
+	  		self.xishu=0.8
+	  	}else if(document.body.clientWidth>=375&&document.body.clientWidth<414){
+	  		self.xishu=1
+	  	}else{
+	  		self.xishu=1.2
+	  		 $('.hello').css('height','3700px')
+	  	}
+				
+				
+
+
+
+
+
 
     })
 
@@ -184,20 +257,47 @@ export default {
   	},
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
-    	if(window.scrollY>600){
-    		var ju=window.scrollY*0.01
-    		var jua=window.scrollY*0.06
-    		var ju1=window.scrollY*0.06
-    		var jua2=window.scrollY*0.03
-//  		console.log(window.scrollY)
-    		var jua3=window.scrollY*0.0314
-    		var jua4=window.scrollY*0.025
-    		$('.allshicha').css("top",-ju+"px");
-    	$('.shicha').css("top",-jua+"px");
-    		$('.sc').css("top",-ju1+"px");
-    	$('.sc1').css("top",-jua2+"px");
-    	$('.sc2').css("top",-jua3+"px");
-    	$('.sc3').css("top",-jua4+"px");
+//  	$("body").unbind('touchmove');
+//  	console.log(window.scrollY )
+    	var self=this;
+    	
+    	var ju=window.scrollY*0.02
+			var ju1=window.scrollY*0.1
+			var ju2=window.scrollY*0.1
+			var ju3=window.scrollY*0.011
+				$('.shicha').css("top",-ju1+"px");
+				$('.allshicha').css("top",-ju+"px");
+    	if(window.scrollY>500&&window.scrollY<960){
+    		
+    	}else if(window.scrollY>980*self.xishu&&window.scrollY<1760*self.xishu){
+    			if(self.fangxiang){
+    			self.speed1=self.speed1+0.2
+    		}else{
+    			self.speed1=self.speed1-0.2
+    		}
+    		$('.sc1').css("top",-self.speed1+"px");
+    	}else if(window.scrollY>1600*self.xishu&&window.scrollY<2163*self.xishu){
+    		if(self.fangxiang){
+    			self.speed=self.speed+0.2
+    		}else{
+    			self.speed=self.speed-0.2
+    		}
+    		$('.sc').css("top",-self.speed+"px");
+    	}
+    	else if(window.scrollY>2163*self.xishu&&window.scrollY<2645*self.xishu){
+    		if(self.fangxiang){
+    			self.speed2=self.speed2+0.2
+    		}else{
+    			self.speed2=self.speed2-0.2
+    		}
+    		$('.sc3').css("top",-self.speed2+"px");
+    	}else if(window.scrollY>2638*self.xishu&&window.scrollY<3440*self.xishu){
+    		if(self.fangxiang){
+    			self.speed3=self.speed3+0.2
+    		}else{
+    			self.speed3=self.speed3-0.2
+    		}
+    		$('.sc4').css("top",-self.speed3+"px");
     	}
     	if(window.scrollY>680){
     		$('.backnav').fadeIn(500);
@@ -221,7 +321,6 @@ export default {
     },
     bgaudio : function(){
       var self=this;
-      console.log(self.audiow.paused)
       if (self.audiow.paused) {
         self.audiow.play();
         self.isbgaudio = true
@@ -262,8 +361,10 @@ export default {
 	background: url("../../static/detail/bgbg.jpg") repeat;
   background-size: 100px 100px;
 	width: 100%;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	background-attachment:fixed;
+	height: 3450px;
+	overflow: hidden;
 }
 .bigbanner{
 	position: relative;
@@ -309,14 +410,13 @@ export default {
 	background: url(../../static/newpic/shan.png) no-repeat;
 	background-size:100%;
 	box-sizing: border-box;
-	padding-top: 116px;
+	padding-top: 40px;
 }
 .adress>img{
 	width: 80%;
 }
 .shicha{
 	position: relative;
-	margin-bottom: 40px;
 }
 .sc1,.sc3,.sc2{
 	position: relative;
@@ -342,7 +442,7 @@ export default {
 .more{
 	text-align: center;
 	width: 100%;
-	padding: 100px 0 50px 0;
+	padding: 50px 0 50px 0;
 }
 .banquana{
 	text-align: center;
@@ -442,6 +542,16 @@ export default {
     100%{
         opacity:.9;              /*透明度为1*/
 				transform:scale(.8,.8);
+    }
+}
+
+.sc1,.sc,.allshicha,.sc3,.sc4{
+	position: relative;
+	
+}
+@media screen and (max-width: 340px) {
+    .hello{
+    	height: 3100px;
     }
 }
 </style>
