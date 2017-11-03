@@ -71,7 +71,7 @@
     			<img src="../../static/newpic/nanmingdalutext.png" class="allshicha"/>
     			<div class="shanshuo ">
     				<img src="../../static/newpic/10.png" class="pic5"/>
-    				<img src="../../static/newpic/nanmingdalu.png" class="pic4 sc4" @click="show(4)"/>
+    				<img src="../../static/newpic/nanmingdalu.png" class="pic4 sc4" @click="show(5)"/>
     			</div>
     		</div>
     	</div>
