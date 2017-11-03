@@ -106,24 +106,20 @@ export default {
     }
   },
   created(){
-
-  },
-  mounted:function(){
-    var self = this;
-    self.audiodom = document.getElementById('clickMusic')
-    console.log(self.index)
-    window.addEventListener('scroll', this.handleScroll);
-    self.$nextTick(function(){
-    var mySwiper = new Swiper ('.swiper-container', {
+  	  var self = this;
+  	self.$nextTick(function(){
+  		self.audiodom = document.getElementById('clickMusic')
+  	})
+  	    setTimeout(function(){
+    	var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
         speed : 800,
         onlyExternal : true,
-        paginationClickable: true,
         // 如果需要前进后退按钮
         nextButton: '.dt-change-click-right',
         prevButton: '.dt-change-click-left',
-//      autoHeight: true,
+        autoHeight: true,
       })
       $('.dt-change-click-left').click(function(){
       	 self.audiodom.play();
@@ -133,7 +129,11 @@ export default {
       	 self.audiodom.play();
          mySwiper.slideNext();
       })
-    })
+    },100)
+  },
+  mounted:function(){
+    console.log(self.index)
+    window.addEventListener('scroll', this.handleScroll);
   },
   methods:{
     returnclick : function(){

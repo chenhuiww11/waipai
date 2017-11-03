@@ -1,0 +1,126 @@
+@charset "UTF-8";
+*,
+:focus,
+a,
+a:active,
+a:hover {
+	outline: 0
+}
+
+*,
+img {
+	border: 0
+}
+
+.data-loading,
+body {
+	background: #f2f4f7
+}
+
+.data-loading .loading-text,
+.loading .loading_text {
+	color: #999;
+	font-size: 14px
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none
+}
+
+input,
+textarea {
+	-webkit-touch-callout: inherit;
+	-webkit-user-select: text
+}
+
+body {
+	overflow-x: hidden;
+	font-size: 12px
+}
+
+ul {
+	list-style: none
+}
+
+a {
+	text-decoration: none!important
+}
+
+em {
+	font-style: normal
+}
+
+img {
+	vertical-align: middle;
+	width: 100%
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both
+}
+
+.hide,
+.ng-cloak {
+	display: none
+}
+
+.oh {
+	overflow: hidden
+}
+
+ div.pinch-zoom,
+div.pinch-zoom img{
+	position: relative;
+}
+div.pinch-zoom>img{
+	 width: 100%;
+    -webkit-user-drag: none;
+	padding-top: 50%;
+}
+.page{
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.88);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.pinch-zoom-container{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	height: 100%!important;
+}
+.nav{
+	position: fixed;
+	top: 80%;
+	right: 10px;
+	width:44px;
+	display: none;
+	z-index: 33;
+}
+.back{
+	position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 4rem;
+}     
+.backnav{
+	position: fixed;
+	left: 20px;
+  top: 20px;
+  width: 4rem;
+  display: none;
+  z-index: 2;
+}  
