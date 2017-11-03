@@ -114,11 +114,13 @@ export default {
     console.log(self.index)
     window.addEventListener('scroll', this.handleScroll);
     self.$nextTick(function(){
-    var mySwiper = new Swiper ('.swiper-container', {
+    setTimeout(function(){
+    	var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
         speed : 800,
         onlyExternal : true,
+        paginationClickable: true,
         // 如果需要前进后退按钮
         nextButton: '.dt-change-click-right',
         prevButton: '.dt-change-click-left',
@@ -133,6 +135,7 @@ export default {
          mySwiper.slideNext();
       })
     })
+    },3000)
   },
   methods:{
     returnclick : function(){
