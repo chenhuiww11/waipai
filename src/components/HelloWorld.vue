@@ -249,7 +249,9 @@ export default {
 		}else if(num==6){
 			$('.pagebg').attr('src','./static/banner/moreadress.png')
 		}
-					$('.page').fadeIn(500);
+		  setTimeout(function(){
+		  	$('.page').fadeIn(500);
+		  },500)
   	},
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
