@@ -6,7 +6,7 @@
 		<dsj v-show="index==5" v-on:listenToChildEvent="showMsgFromChild"></dsj>
 		<jwl v-show="index==2" v-on:listenToChildEvent="showMsgFromChild"></jwl>
 		<gsj v-show="index==3" v-on:listenToChildEvent="showMsgFromChild"></gsj>
-		<detail v-show="index==1||!show" :index='index' v-on:listenToChildEvent="showMsgFromChild"></detail>
+		<detail v-show="index==1||!show" :index='index' v-on:listenToChildEvent="showMsgFromChild" :show='show'></detail>
 		<!--<router-view></router-view>-->
 	</div>
 </template>
@@ -80,6 +80,7 @@
 	        count (val,oldval) {
 	            if(val >= 100){
 	                this.show = true
+	                
 	                //然后可以对后台发送一些ajax操作
 	            }
 	        }

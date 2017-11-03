@@ -47,7 +47,7 @@
 <script>
 export default {
   name: 'detail',
-  props : ['index'],
+  props : ['index','show'],
   data () {
     return {
       audiodom : '',
@@ -106,12 +106,15 @@ export default {
     }
   },
   created(){
-  	  var self = this;
-  	self.$nextTick(function(){
+  },
+  mounted:function(){
+  	 var self = this;
+    window.addEventListener('scroll', this.handleScroll);
+    self.$nextTick(function(){
   		self.audiodom = document.getElementById('clickMusic')
+  		
   	})
-  	    setTimeout(function(){
-    	var mySwiper = new Swiper ('.swiper-container', {
+    	var mySwiper1 = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
         speed : 800,
@@ -119,21 +122,16 @@ export default {
         // 如果需要前进后退按钮
         nextButton: '.dt-change-click-right',
         prevButton: '.dt-change-click-left',
-        autoHeight: true,
+//      autoHeight: true,
       })
       $('.dt-change-click-left').click(function(){
       	 self.audiodom.play();
-        mySwiper.slidePrev();
+        mySwiper1.slidePrev();
       })
       $('.dt-change-click-right').click(function(){
       	 self.audiodom.play();
-         mySwiper.slideNext();
+         mySwiper1.slideNext();
       })
-    },100)
-  },
-  mounted:function(){
-    console.log(self.index)
-    window.addEventListener('scroll', this.handleScroll);
   },
   methods:{
     returnclick : function(){

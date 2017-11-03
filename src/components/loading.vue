@@ -65,8 +65,33 @@ export default {
 			   	    $('.loadper').text(pro+'%');
 //           return
 			   	  	$('.loading').fadeOut(500)
-
+					
               self.$emit('listenToChildEvent',9)
+              
+  						var mySwiper = new Swiper ('.swiper-container', {
+				        direction: 'horizontal',
+				        loop: true,
+				        speed : 800,
+				        onlyExternal : true,
+				        // 如果需要前进后退按钮
+				        nextButton: '.dt-change-click-right',
+				        prevButton: '.dt-change-click-left',
+				        autoHeight: true,
+				      })
+				      $('.dt-change-click-left').click(function(){
+//				      	 self.audiodom.play();
+				        mySwiper.slidePrev();
+				      })
+				      $('.dt-change-click-right').click(function(){
+//				      	 self.audiodom.play();
+				         mySwiper.slideNext();
+				      })              
+              
+              
+              
+              
+              
+              
 			   	  	clearInterval(proBar);
 			   }else{
 			   	  $('.loadper').text('99%');
