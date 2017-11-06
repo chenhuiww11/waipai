@@ -1,5 +1,6 @@
 <template>
   <div class="loading" ontouchmove="return false;">
+  	     <img src="../../static/loading/loading.png" style="height: 100%;"/>
   		  <img src="../../static/loading/slogan.png" class="title"/>
   		  <div class="loadper">
   		  	0%
@@ -67,31 +68,7 @@ export default {
 			   	  	$('.loading').fadeOut(500)
 					
               self.$emit('listenToChildEvent',9)
-              
-//						var mySwiper = new Swiper ('.swiper-container', {
-//				        direction: 'horizontal',
-//				        loop: true,
-//				        speed : 400,
-//				        onlyExternal : true,
-//				        // 如果需要前进后退按钮
-//				        nextButton: '.dt-change-click-right',
-//				        prevButton: '.dt-change-click-left',
-//				        autoHeight: true,
-//				      })
-//				      $('.dt-change-click-left').click(function(){
-////				      	 self.audiodom.play();
-//				        mySwiper.slidePrev();
-//				      })
-//				      $('.dt-change-click-right').click(function(){
-////				      	 self.audiodom.play();
-//				         mySwiper.slideNext();
-//				      })              
-              
-              
-              
-              
-              
-              
+
 			   	  	clearInterval(proBar);
 			   }else{
 			   	  $('.loadper').text('99%');
@@ -121,7 +98,7 @@ html,body{
 .loading{
 	width: 100%;
 	height: 100%;
-	background:#455a64 url(../../static/loading/loading.png) no-repeat;
+	background:#455a64  no-repeat;
 	background-size:cover;
 	position: fixed;
 	top: 0;

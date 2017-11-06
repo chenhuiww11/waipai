@@ -171,8 +171,8 @@ export default {
       document.addEventListener("WeixinJSBridgeReady", function () {
 				if(self.isiOS){
 
-					self.audiow.play();
-        	self.audiow.pause();
+//					self.audiow.play();
+//      	self.audiow.pause();
 				}
       }, false);
       $('.pinch-zoom').each(function () {
@@ -307,15 +307,6 @@ export default {
   	back(){
   		$('body,html').animate({ scrollTop: 0 }, 200);
   	},
-  	returnclick : function(){
-  		var self=this;
-  		if (self.audiow.paused) {
-            self.audiow.play();
-        } else {
-        	self.audiow.paused();
-            // 播放中
-        }
-    },
   },
   mounted(){
     var self = this;

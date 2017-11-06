@@ -27,9 +27,7 @@ export default {
   	back(){
 			var self = this
 				self.audiodom.play();
-				setTimeout(function(){
-					self.$emit('listenToChildEvent',0)
-				},300)
+				self.$emit('listenToChildEvent',0)
         
   	}
   }

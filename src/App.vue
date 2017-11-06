@@ -1,12 +1,12 @@
 <template>
 	<div id="app">
-		<!--<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>-->
+		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>
 		<hello v-show="index==0" v-on:listenToChildEvent="showMsgFromChild" :isShowAudio="showAudio"></hello>
-		<cqb v-show="index==4" v-on:listenToChildEvent="showMsgFromChild"></cqb>
-		<dsj v-show="index==5" v-on:listenToChildEvent="showMsgFromChild"></dsj>
-		<jwl v-show="index==2" v-on:listenToChildEvent="showMsgFromChild"></jwl>
-		<gsj v-show="index==3" v-on:listenToChildEvent="showMsgFromChild"></gsj>
-		<detail v-show="index==1||!show" :index='index' v-on:listenToChildEvent="showMsgFromChild" :show='show'></detail>
+		<cqb v-show="index==4" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></cqb>
+		<dsj v-show="index==5" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></dsj>
+		<jwl v-show="index==2" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></jwl>
+		<gsj v-show="index==3" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></gsj>
+		<detail v-show="index==1" v-if="show" :index='index' v-on:listenToChildEvent="showMsgFromChild" :show='show'></detail>
 		<!--<router-view></router-view>-->
 	</div>
 </template>
@@ -63,25 +63,19 @@
         if(data == 9){
           this.showAudio = true
         }else{
-        	
-         
           if(data == 0){
           	 self.index = data
 						if(window.sessionStorage.getItem('headerheight')==0){
 							window.sessionStorage.setItem('headerheight',window.sessionStorage.getItem('headerheighttwo'))
 						}
-//						setTimeout(function(){
-//							
-//            $('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
-//						},0)
-			$('body,html').fadeOut(100);
-          	setTimeout(function(){
-          		$('body,html').scrollTop(window.sessionStorage.getItem('headerheight'));
+		 	$('body,html').css('opacity','0');
+		 	setTimeout(function(){
+            				 	$('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
           	},100)
         	setTimeout(function(){
         		self.index = data
-        		$('body,html').fadeIn(200);
-		       	},100)
+        		$('body,html').css('opacity','1');
+		       	},200)
           }else{
           	$('body,html').fadeOut(100);
           	setTimeout(function(){
@@ -97,8 +91,12 @@
     },
     watch : {
 	        count (val,oldval) {
-	            if(val >= 100){
-	                this.show = true
+	        	var self=this;
+	            if(val >= 29){
+	            	console.log(val)
+	            	setTimeout(function(){
+	            		 self.show = true
+	            	},2500)
 	                
 	                //然后可以对后台发送一些ajax操作
 	            }

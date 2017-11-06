@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="dt-info">
-            <img :src="item.imginfo" alt="">
+            <img :src="item.imginfo" alt="" style="padding-bottom: 20px;">
           </div>
         </div>
       </div>
@@ -122,7 +122,9 @@ export default {
         // 如果需要前进后退按钮
         nextButton: '.dt-change-click-right',
         prevButton: '.dt-change-click-left',
-//      autoHeight: true,
+        autoHeight: true,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+   			observeParents:true,//修改swiper的父元素时，自动初始化swiper
       })
       $('.dt-change-click-left').click(function(){
       	 self.audiodom.play();
@@ -322,7 +324,7 @@ export default {
 }
 .dt-info{
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   padding-top: 40px;
 }
   .dt-info-banquan{
@@ -335,5 +337,4 @@ export default {
     margin: auto auto;
     z-index: 8000;
   }
-
 </style>
