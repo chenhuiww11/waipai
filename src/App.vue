@@ -59,11 +59,14 @@
         },
     methods:{
     	showMsgFromChild : function(data){
+    	var self=this;	
         if(data == 9){
           this.showAudio = true
         }else{
-          this.index = data
+        	
+         
           if(data == 0){
+          	 self.index = data
 						if(window.sessionStorage.getItem('headerheight')==0){
 							window.sessionStorage.setItem('headerheight',window.sessionStorage.getItem('headerheighttwo'))
 						}
@@ -71,7 +74,14 @@
               $('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
 						},0)
           }else{
-            $('body,html').animate({ scrollTop: 0 },0);
+          	$('body,html').css('opacity',0);
+          	setTimeout(function(){
+          		$('body,html').scrollTop(0);
+          	},100)
+        	setTimeout(function(){
+        		self.index = data
+        		$('body,html').css('opacity',1);
+		       	},100)
           }
         }
       }

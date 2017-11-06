@@ -114,10 +114,10 @@ export default {
   		self.audiodom = document.getElementById('clickMusic')
   		
   	})
-    	var mySwiper1 = new Swiper ('.swiper-container', {
+    	var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
-        speed : 800,
+        speed : 400,
         onlyExternal : true,
         // 如果需要前进后退按钮
         nextButton: '.dt-change-click-right',
@@ -126,20 +126,20 @@ export default {
       })
       $('.dt-change-click-left').click(function(){
       	 self.audiodom.play();
-        mySwiper1.slidePrev();
+        mySwiper.slidePrev();
       })
       $('.dt-change-click-right').click(function(){
       	 self.audiodom.play();
-         mySwiper1.slideNext();
+         mySwiper.slideNext();
       })
   },
   methods:{
     returnclick : function(){
       var self = this
         this.audiodom.play();
-        setTimeout(function(){
+//      setTimeout(function(){
         self.$emit('listenToChildEvent',0)
-        },300)
+//      },100)
 
     },
     clickAudio : function(){
@@ -188,6 +188,7 @@ export default {
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     display: table;
+    height: 50px;
   }
 .dt-change-click-right{
   width: 40%;
@@ -199,6 +200,7 @@ export default {
   transform: translate(50%,-50%);
   transform-origin:50% 50%;
   display:table;
+  height: 50px;
 }
 .dt-change-click-right span,.dt-change-click-left span{
     width: 1rem;
