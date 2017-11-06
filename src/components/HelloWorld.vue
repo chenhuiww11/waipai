@@ -96,8 +96,8 @@
         </div>
     </div>
     <div class="returnclick">
-      <audio id="Music" src="./static/bg.mp3" loop="loop" preload>
-    	</audio>
+      <!--<audio id="Music" src="./static/bg.mp3" loop="loop" preload>
+    	</audio>-->
      </div>
     <audio id="clickMusic" src="./static/clickaudio.mp3" >
     </audio>
@@ -159,33 +159,7 @@ export default {
             }  
             setTimeout(function(){t = p;},0);         
     });  
-  	console.log(document.body.clientWidth)
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
-  	
+  
   	self.$nextTick(function(){
       self.imgwidth=self.picwidth/5*0.7
   		$('.pic').css('width',self.imgwidth)
@@ -339,17 +313,6 @@ export default {
             // 播放中
         }
     },
-    bgaudio : function(){
-      var self=this;
-      if (self.audiow.paused) {
-        self.audiow.play();
-        self.isbgaudio = true
-      } else {
-        self.audiow.pause();
-        self.isbgaudio = false
-        // 播放中
-      }
-    }
   },
   mounted(){
     var self = this;
