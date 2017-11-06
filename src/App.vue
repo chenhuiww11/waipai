@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>
+		<!--<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>-->
 		<hello v-show="index==0" v-on:listenToChildEvent="showMsgFromChild" :isShowAudio="showAudio"></hello>
 		<cqb v-show="index==4" v-on:listenToChildEvent="showMsgFromChild"></cqb>
 		<dsj v-show="index==5" v-on:listenToChildEvent="showMsgFromChild"></dsj>
@@ -70,17 +70,26 @@
 						if(window.sessionStorage.getItem('headerheight')==0){
 							window.sessionStorage.setItem('headerheight',window.sessionStorage.getItem('headerheighttwo'))
 						}
-						setTimeout(function(){
-              $('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
-						},0)
+//						setTimeout(function(){
+//							
+//            $('body,html').animate({ scrollTop: window.sessionStorage.getItem('headerheight')},0);
+//						},0)
+			$('body,html').fadeOut(100);
+          	setTimeout(function(){
+          		$('body,html').scrollTop(window.sessionStorage.getItem('headerheight'));
+          	},100)
+        	setTimeout(function(){
+        		self.index = data
+        		$('body,html').fadeIn(200);
+		       	},100)
           }else{
-          	$('body,html').css('opacity',0);
+          	$('body,html').fadeOut(100);
           	setTimeout(function(){
           		$('body,html').scrollTop(0);
           	},100)
         	setTimeout(function(){
         		self.index = data
-        		$('body,html').css('opacity',1);
+        		$('body,html').fadeIn(200);
 		       	},100)
           }
         }
