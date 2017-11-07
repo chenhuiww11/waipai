@@ -67,6 +67,7 @@ export default {
 	width: 100%;
 	min-height: 100%;
 	padding:70px 0 70px 0;
+	box-sizing: border-box;
 	text-align: center;
 }
 /*.back{

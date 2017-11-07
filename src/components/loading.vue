@@ -7,8 +7,8 @@
   		  </div>
   		  <div class="horse">
   		  </div>
-      <audio id="Music" src="./static/bg.mp3" loop="loop" preload>
-      </audio>
+      <!--<audio id="Music" src="./static/bg.mp3" loop="loop" preload>
+      </audio>-->
   	</div>
 </template>
 

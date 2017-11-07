@@ -1,6 +1,6 @@
 <template>
   <div class="cqbang">
-    <img src="../../static/dsj/txt.png" class="text"/>
+    <img src="../../static/dsj/txt.png?v=1" class="text"/>
     <div class="back" @click="back()">
      	  <img src="../../static/dsj/return.png"/>
      </div>
@@ -41,8 +41,9 @@ export default {
 	background: url("../../static/detail/bgbg.jpg") repeat;
   background-size: 100px 100px;
 	width: 100%;
-	min-height: 100%;
-	padding:70px 0 70px 0;
+	height: 100%;
+	padding:100px 0 0px 0;
+	box-sizing: border-box;
 	text-align: center;
 }
 /*.back{
