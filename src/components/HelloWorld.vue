@@ -230,7 +230,7 @@ export default {
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
 //  	$("body").unbind('touchmove');
-    	console.log(window.scrollY )
+//  	console.log(window.scrollY )
     	var self=this;
     	
     	var ju=window.scrollY*0.02
