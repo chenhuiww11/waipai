@@ -67,7 +67,16 @@ export default {
 //           return
 			   	  	$('.loading').fadeOut(500)
 //			   	  	alert($('.hello').height())
-					    $('.hello').css('height',$('.hello').height()-270)
+						var u = navigator.userAgent;
+						var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+						var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+						if(isAndroid){
+							
+							 $('.hello').css('height',$('.hello').height()-270)
+						}
+						if(isiOS){
+							$('.hello').css('height',$('.hello').height())
+						}
               self.$emit('listenToChildEvent',9)
 
 			   	  	clearInterval(proBar);

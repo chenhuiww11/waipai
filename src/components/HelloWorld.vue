@@ -293,6 +293,12 @@ export default {
     		}else{
     			self.speed3=self.speed3-0.5
     		}
+    		if(self.speed3>30){
+    			self.speed3=30
+    		}
+    		if(self.speed3<-10){
+    			self.speed3=-10
+    		}
     		$('.sc4').css("-webkit-transform","translateY("+-self.speed3+"px"+")");
     		$('.sc4').css("transform","translateY("+-self.speed3+"px"+")");
 //  		$('.sc4').css("top",-self.speed3+"px");
@@ -339,7 +345,7 @@ export default {
 	background: url("../../static/detail/bgbg.jpg") repeat;
   background-size: 100px 100px;
 	width: 100%;
-	/*min-height: 100%;*/
+	min-height: 100%;
 	background-attachment:fixed;
 	/*height: 3450px;*/
 	overflow: hidden;
@@ -532,4 +538,5 @@ export default {
     	height: 3100px;
     }
 }
+
 </style>
