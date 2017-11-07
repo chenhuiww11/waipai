@@ -66,7 +66,8 @@ export default {
 			   	    $('.loadper').text(pro+'%');
 //           return
 			   	  	$('.loading').fadeOut(500)
-					
+//			   	  	alert($('.hello').height())
+					    $('.hello').css('height',$('.hello').height()-270)
               self.$emit('listenToChildEvent',9)
 
 			   	  	clearInterval(proBar);

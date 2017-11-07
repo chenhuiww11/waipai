@@ -31,7 +31,7 @@
     <div class="xsnr shicha">
     	<div class="xsnrtitle">
     		<div class="adress">
-    			<img src="../../static/newpic/1.png" class="shicha" style="padding-top: 110px;"/>
+    			<img src="../../static/newpic/1.png" class="shicha" style="padding-top: 110px;width: 89%;"/>
     			<div class="shanshuo" style="margin-top: 0;">
     				<img src="../../static/newpic/shan2.png" class="pic5"/>
     				<img src="../../static/newpic/tianluo.png" class="pic4 allshicha" @click="show(1)"/>
@@ -50,7 +50,7 @@
     	</div>
     	<div class="xsnrtitle nobg">
     		<div class="adress  nobg wujinghuoyu">
-    			<img src="../../static/newpic/wujinghuoyutext.png" class="allshicha"/>
+    			<img src="../../static/newpic/wujinghuoyutext.png" class="allshicha" style="width: 74%;"/>
     			<div class="shanshuo wujin">
     				<img src="../../static/newpic/06.png" class="pic5" style="position: absolute;left: 0;"/>
     				<img src="../../static/newpic/wujinghuoyu.png" @click="show(3)" class="pic4 sc"/>
@@ -68,7 +68,7 @@
     	</div>
     	<div class="xsnrtitle nobg">
     		<div class="adress  nobg">
-    			<img src="../../static/newpic/nanmingdalutext.png" class="allshicha"/>
+    			<img src="../../static/newpic/nanmingdalutext.png" class="allshicha" style="width: 83%;"/>
     			<div class="shanshuo ">
     				<img src="../../static/newpic/10.png" class="pic5"/>
     				<img src="../../static/newpic/nanmingdalu.png" class="pic4 sc4" @click="show(5)"/>
@@ -163,6 +163,7 @@ export default {
   	self.$nextTick(function(){
       self.imgwidth=self.picwidth/5*0.7
   		$('.pic').css('width',self.imgwidth)
+
 				$('.page').click(function(){
 					$("body").unbind('touchmove');
 					$('.page').fadeOut(500);
@@ -340,7 +341,7 @@ export default {
 	width: 100%;
 	/*min-height: 100%;*/
 	background-attachment:fixed;
-	height: 3450px;
+	/*height: 3450px;*/
 	overflow: hidden;
 }
 .bigbanner{
@@ -390,7 +391,7 @@ export default {
 	padding-top: 40px;
 }
 .adress>img{
-	width: 80%;
+	width: 70%;
 }
 .shicha{
 	position: relative;
