@@ -538,5 +538,9 @@ export default {
     	height: 3100px;
     }
 }
-
+@media (min-width:325px) and (max-width:375px) {
+	 .hello{
+	 	height: 3400px!important;
+	 }
+	 }
 </style>
