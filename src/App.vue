@@ -2,11 +2,11 @@
 	<div id="app">
 		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>
 		<hello v-show="index==0" v-on:listenToChildEvent="showMsgFromChild" :isShowAudio="showAudio"></hello>
+		<detail v-show="index==1" v-if="show" :index='index' v-on:listenToChildEvent="showMsgFromChild" :show='show'></detail>
 		<cqb v-show="index==4" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></cqb>
 		<dsj v-show="index==5" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></dsj>
 		<jwl v-show="index==2" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></jwl>
 		<gsj v-show="index==3" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></gsj>
-		<detail v-show="index==1" v-if="show" :index='index' v-on:listenToChildEvent="showMsgFromChild" :show='show'></detail>
 		<!--<router-view></router-view>-->
 	</div>
 </template>
@@ -96,7 +96,7 @@
 	            	console.log(val)
 	            	setTimeout(function(){
 	            		 self.show = true
-	            	},2500)
+	            	},3500)
 	                
 	                //然后可以对后台发送一些ajax操作
 	            }

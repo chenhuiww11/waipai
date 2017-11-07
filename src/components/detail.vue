@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="dt-info">
-            <img :src="item.imginfo" alt="" style="padding-bottom: 20px;">
+            <img :src="item.imginfo" alt="" style="padding-bottom: 60px;">
           </div>
         </div>
       </div>
