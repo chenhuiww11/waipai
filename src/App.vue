@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<!--<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>-->
+		<loading :show='show' v-on:listenToChildEvent="showMsgFromChild" v-show="isNewPage"></loading>
 		<hello v-show="index==0" v-on:listenToChildEvent="showMsgFromChild" :isShowAudio="showAudio"></hello>
 		<detail v-show="index==1" v-if="show" :index='index' v-on:listenToChildEvent="showMsgFromChild" :show='show'></detail>
 		<cqb v-show="index==4" v-if="show" v-on:listenToChildEvent="showMsgFromChild"></cqb>
