@@ -1,18 +1,112 @@
-<!DOCTYPE html><html><head><meta charset=UTF-8><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta content="telephone=no" name=format-detection><meta name=msapplication-tap-highlight content=no><meta name=renderer content=webkit><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>苍穹榜之圣灵纪</title><link rel=stylesheet type=text/css href=static/base.css><link rel=stylesheet type=text/css href=static/swiper-3.4.2.min.css><script src=//libs.baidu.com/jquery/2.0.0/jquery.min.js></script><script src=static/shicha.js type=text/javascript charset=utf-8></script><script src=static/pinchzoom.js type=text/javascript charset=utf-8></script><script src=static/swiper-3.4.2.jquery.min.js></script><script src=//res.wx.qq.com/open/js/jweixin-1.0.0.js></script><link href=./static/css/app.4fe8d252c265f998a35fcce977ae7bc8.css rel=stylesheet></head><body><div class=demo><div class=box><div id=app></div></div></div><script type=text/javascript src=./static/js/manifest.b08922415c43f9caffa4.js></script><script type=text/javascript src=./static/js/vendor.723cb143120f9a8c7d1e.js></script><script type=text/javascript src=./static/js/app.1061729a2cbe2e00e327.js></script></body><script type=text/javascript>function a(){
-  if (document.documentElement.clientWidth<640) {
-   document.querySelector('html').style.fontSize=document.documentElement.clientWidth/30+'px';
-   document.querySelector('body').style.fontSize=document.documentElement.clientWidth/30+'px';
-  }
-  else{
-   document.querySelector('html').style.fontSize=640/30+'px';
-  }
- }
- 	a();</script><script type=text/javascript>window.WXWX={
-            //  //的选填 
-            share:{
-                title:'《苍穹榜之圣灵纪》-天蚕土豆',
+<!DOCTYPE html><html><head><meta charset=UTF-8><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta content="telephone=no" name=format-detection><meta name=msapplication-tap-highlight content=no><meta name=renderer content=webkit><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>苍穹榜之圣灵纪</title><link rel=stylesheet type=text/css href=static/base.css><link rel=stylesheet type=text/css href=static/swiper-3.4.2.min.css><script src=//libs.baidu.com/jquery/2.0.0/jquery.min.js></script><script src=static/shicha.js type=text/javascript charset=utf-8></script><script src=static/pinchzoom.js type=text/javascript charset=utf-8></script><script src=static/swiper-3.4.2.jquery.min.js></script><script src=//res.wx.qq.com/open/js/jweixin-1.0.0.js></script><link href=./static/css/app.87ae09d6187c88f102cc7a2e7b42d80c.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.88cc6d578d544418f992.js></script><script type=text/javascript src=./static/js/vendor.723cb143120f9a8c7d1e.js></script><script type=text/javascript src=./static/js/app.efc55ce436ad4ade5f9c.js></script></body><script type=text/javascript>var apiList = [
+					'checkJsApi',
+					'onMenuShareTimeline',
+					'onMenuShareAppMessage',
+					'onMenuShareQQ',
+					'onMenuShareWeibo',
+					'hideMenuItems',
+					'showMenuItems',
+					'hideAllNonBaseMenuItem',
+					'showAllNonBaseMenuItem',
+					'translateVoice',
+					'startRecord',
+					'stopRecord',
+					'onRecordEnd',
+					'playVoice',
+					'pauseVoice',
+					'stopVoice',
+					'uploadVoice',
+					'downloadVoice',
+					'chooseImage',
+					'previewImage',
+					'uploadImage',
+					'downloadImage',
+					'getNetworkType',
+					'openLocation',
+					'getLocation',
+					'hideOptionMenu',
+					'showOptionMenu',
+					'closeWindow',
+					'scanQRCode',
+					'chooseWXPay',
+					'openProductSpecificView',
+					'addCard',
+					'chooseCard',
+					'openCard'
+				];
+   			$.ajax({
+					url: '//www.weitiancm.com/wx-api/wt/wxjs',
+					type: 'post',
+					data: {
+						url: encodeURIComponent(window.location.href.split('#')[0])
+					},
+					success: function(data) {
+						console.log(data)
+						wx.config({
+							debug: true,
+							appId: 'wx6f03818fc39c9edc',
+							timestamp: data.timestamp,
+							nonceStr: data.nonceStr,
+							signature: data.signature,
+							jsApiList: apiList
+						});
+						wx.ready(function() {
+							wx.hideMenuItems({
+								menuList: [
+									"menuItem:share:qq",
+									"menuItem:share:weiboApp",
+									"menuItem:favorite", //收藏
+									"menuItem:share:facebook",
+									"menuItem:share:QZone",
+									"menuItem:copyUrl",
+									"menuItem:openWithQQBrowser",
+									"menuItem:openWithSafari"
+								]
+							});
+						});
+					}
+				})
+				function wxShare(option, type) {
+					var fromurl = "https://appnew.ly.com/md/wxhuiyuanri/module/wxday.html";
+					//var url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3827070276e49e30&redirect_uri=http://wx.17u.cn/flight/getwxuserinfo.html?url=' + fromurl + '&showwxpaytitle=1&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect';
+					wx.ready(function() {
+						//										wx.hideOptionMenu(); //禁止分享
+						wx.onMenuShareTimeline({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
                 link: location.href,
-                imgUrl: "static/logo.jpg",
-                desc : "'大千世界，灵路少年；傲立苍穹，雄视天下'"
-            }
-        };</script><script type=text/javascript src="https://openapi.xmkanshu.com/wechat/jssdk_share?wxid=wx0dc92abb6709a91f"></script></html>
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareAppMessage({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareQQ({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareWeibo({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareQZone({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						
+						
+						
+						
+						
+					});
+				}
+				wxShare();
+				window.wxShare = wxShare;</script></html>

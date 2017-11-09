@@ -23,27 +23,118 @@
     <!-- built files will be auto injected -->
   </body>
  <script type="text/javascript">
- 	 function a(){
-  if (document.documentElement.clientWidth<640) {
-   document.querySelector('html').style.fontSize=document.documentElement.clientWidth/30+'px';
-   document.querySelector('body').style.fontSize=document.documentElement.clientWidth/30+'px';
-  }
-  else{
-   document.querySelector('html').style.fontSize=640/30+'px';
-  }
- }
- 	a();
- </script>
- <script type="text/javascript">
-    window.WXWX={
-            //  //的选填 
-            share:{
-                title:'《苍穹榜之圣灵纪》-天蚕土豆',
+         	var apiList = [
+					'checkJsApi',
+					'onMenuShareTimeline',
+					'onMenuShareAppMessage',
+					'onMenuShareQQ',
+					'onMenuShareWeibo',
+					'hideMenuItems',
+					'showMenuItems',
+					'hideAllNonBaseMenuItem',
+					'showAllNonBaseMenuItem',
+					'translateVoice',
+					'startRecord',
+					'stopRecord',
+					'onRecordEnd',
+					'playVoice',
+					'pauseVoice',
+					'stopVoice',
+					'uploadVoice',
+					'downloadVoice',
+					'chooseImage',
+					'previewImage',
+					'uploadImage',
+					'downloadImage',
+					'getNetworkType',
+					'openLocation',
+					'getLocation',
+					'hideOptionMenu',
+					'showOptionMenu',
+					'closeWindow',
+					'scanQRCode',
+					'chooseWXPay',
+					'openProductSpecificView',
+					'addCard',
+					'chooseCard',
+					'openCard'
+				];
+   			$.ajax({
+					url: '//www.weitiancm.com/wx-api/wt/wxjs',
+					type: 'post',
+					data: {
+						url: encodeURIComponent(window.location.href.split('#')[0])
+					},
+					success: function(data) {
+						console.log(data)
+						wx.config({
+							debug: true,
+							appId: 'wx6f03818fc39c9edc',
+							timestamp: data.timestamp,
+							nonceStr: data.nonceStr,
+							signature: data.signature,
+							jsApiList: apiList
+						});
+						wx.ready(function() {
+							wx.hideMenuItems({
+								menuList: [
+									"menuItem:share:qq",
+									"menuItem:share:weiboApp",
+									"menuItem:favorite", //收藏
+									"menuItem:share:facebook",
+									"menuItem:share:QZone",
+									"menuItem:copyUrl",
+									"menuItem:openWithQQBrowser",
+									"menuItem:openWithSafari"
+								]
+							});
+						});
+					}
+				})
+				function wxShare(option, type) {
+					var fromurl = "https://appnew.ly.com/md/wxhuiyuanri/module/wxday.html";
+					//var url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3827070276e49e30&redirect_uri=http://wx.17u.cn/flight/getwxuserinfo.html?url=' + fromurl + '&showwxpaytitle=1&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect';
+					wx.ready(function() {
+						//										wx.hideOptionMenu(); //禁止分享
+						wx.onMenuShareTimeline({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
                 link: location.href,
-                imgUrl: "static/logo.jpg",
-                desc : "'大千世界，灵路少年；傲立苍穹，雄视天下'"
-            }
-        };
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareAppMessage({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareQQ({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareWeibo({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						wx.onMenuShareQZone({
+							 title:'《苍穹榜之圣灵纪》-天蚕土豆',
+                link: location.href,
+                imgUrl: "http://static.weitiancm.com/fs/app/sljlogo.jpg",
+                desc : "大千世界，灵路少年；\n傲立苍穹，雄视天下"
+						});
+						
+						
+						
+						
+						
+					});
+				}
+				wxShare();
+				window.wxShare = wxShare;   
+
  </script>
- <script type="text/javascript" src="https://openapi.xmkanshu.com/wechat/jssdk_share?wxid=wx0dc92abb6709a91f"></script>
 </html>

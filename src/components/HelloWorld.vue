@@ -32,7 +32,7 @@
     	<div class="xsnrtitle">
     		<div class="adress">
     			<img src="../../static/newpic/1.png" class="shicha" style="padding-top: 110px;width: 89%;"/>
-    			<div class="shanshuo" style="margin-top: 0;">
+    			<div class="shanshuo shanshuo1" style="margin-top: 0;">
     				<img src="../../static/newpic/shan2.png" class="pic5"/>
     				<img src="../../static/newpic/tianluo.png" class="pic4 allshicha" @click="show(1)"/>
     				<img src="../../static/loading/dian.png" class="dian"/>
@@ -117,6 +117,7 @@ export default {
     	scrolled: false,
 			isAndroid:'',
 			isiOS:'',
+			isqq:'',
 			headerheight:0,
       clickMusic : '',
       chushi:true,
@@ -140,10 +141,11 @@ export default {
     }
   },
   created(){
-		var u = navigator.userAgent;
-		this.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-		this.isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
   	var self=this;
+		var u = navigator.userAgent;
+		self.isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+		self.isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+  	self.isqq=u.match(/\sQQ/i) !== null//是否QQ
   	
   	var p=0,t=0;  
   
@@ -187,7 +189,14 @@ export default {
 	  		self.xishu=1.05
 	  		 $('.hello').css('height','3700px')
 	  	}
-				
+				if(self.isqq){
+					$('.shicha').css("top",-60+"px");
+					$('.allshicha').css("top",-10+"px");
+					$('.xsnrtitle').css('margin-bottom','80px');
+					$('.shanshuo').css('margin-top','80px');
+					$('.shanshuo1').css('margin-top','20px');
+					$('.hello').css('height','auto')
+				}
 				
 
 
@@ -238,6 +247,7 @@ export default {
 			var ju1=window.scrollY*0.1
 			var ju2=window.scrollY*0.1
 			var ju3=window.scrollY*0.011
+			if(!self.isqq){
 				$('.shicha').css("top",-ju1+"px");
 				$('.allshicha').css("top",-ju+"px");
     	if(window.scrollY>500&&window.scrollY<960){
@@ -303,6 +313,8 @@ export default {
     		$('.sc4').css("transform","translateY("+-self.speed3+"px"+")");
 //  		$('.sc4').css("top",-self.speed3+"px");
     	}
+    			
+			}
     	if(window.scrollY>680){
     		$('.backnav').fadeIn(500);
     		$('.nav').fadeIn(500);
@@ -540,7 +552,7 @@ export default {
 }
 @media (min-width:325px) and (max-width:375px) {
 	 .hello{
-	 	height: 3400px!important;
+	 	height: 3400px;
 	 }
 	 }
 </style>
